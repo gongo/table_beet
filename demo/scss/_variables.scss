@@ -1,0 +1,134 @@
+///////////////////////
+//      settings     //
+///////////////////////
+$max-width:           1200px; // max container width (i.e. - 960px)
+$gutter:              10px;   // gutter spacing
+
+
+// base styles
+$background-color:    #ffffff;
+$font-color:          #2b2b2d;
+$font-size:           14px;
+$font-family:         Helvetica, Arial, Geneva, sans-serif;
+$link-color:          #489AC1;
+$link-active:         #198D98;
+$selection-color:     $font-color;
+$selection-text:      #ffffff;
+$border-color:        #dddddd;
+$button-color:        #1DABB8;
+$button-active:       #198D98;
+$button-text:         #ffffff;
+$button-active-text:  #ffffff;
+$error-color:         #A40400;
+$warning-color:       #FF971E;
+$success-color:       #5FB40E;
+$radius:              4px;
+
+
+
+
+///////////////////////
+//     fractions     //
+///////////////////////
+
+// wholes
+$one-whole:         100%;
+
+// halves
+$one-half:          50%;
+$two-halves:        $one-whole;
+
+// thirds
+$one-third:         33.3333333333333%;
+$two-thirds:        66.6666666666666%;
+$three-thirds:      $one-whole;
+
+// fourths
+$one-fourth:        25%;
+$two-fourths:       $one-half;
+$three-fourths:     75%;
+$four-fourths:      $one-whole;
+
+// fifths
+$one-fifth:         20%;
+$two-fifths:        40%;
+$three-fifths:      60%;
+$four-fifths:       80%;
+$five-fifths:       $one-whole;
+
+// sixths
+$one-sixth:         16.666666666667%;
+$two-sixths:        $one-third;
+$three-sixths:      $one-half;
+$four-sixths:       $two-thirds;
+$five-sixths:       83.333333333333%;
+$six-sixths:        $one-whole;
+
+// sevenths
+$one-seventh:       14.285714285714%;
+$two-sevenths:      28.571428571429%;
+$three-sevenths:    42.857142857143%;
+$four-sevenths:     57.142857142857%;
+$five-sevenths:     71.428571428571%;
+$six-sevenths:      85.714285714286%;
+$seven-sevenths:    $one-whole;
+
+// eighths
+$one-eighth:        12.5%;
+$two-eighths:       $one-fourth;
+$three-eighths:     37.5%;
+$four-eighths:      $one-half;
+$five-eighths:      62.5%;
+$six-eighths:       $three-fourths;
+$seven-eighths:     87.5%;
+$eight-eighths:     $one-whole;
+
+// ninths
+$one-ninth:         11.111111111111%;
+$two-ninths:        22.222222222222%;
+$three-ninths:      $one-third;
+$four-ninths:       44.444444444444%;
+$five-ninths:       55.555555555556%;
+$six-ninths:        $two-thirds;
+$seven-ninths:      77.777777777778%;
+$eight-ninths:      88.888888888889%;
+$nine-ninths:       $one-whole;
+
+// tenths
+$one-tenth:         10%;
+$two-tenths:        $one-fifth;
+$three-tenths:      30%;
+$four-tenths:       $two-fifths;
+$five-tenths:       $one-half;
+$six-tenths:        $three-fifths;
+$seven-tenths:      70%;
+$eight-tenths:      $four-fifths;
+$nine-tenths:       90%;
+$ten-tenths:        $one-whole;
+
+// elevenths
+$one-eleventh:      9.090909090909%;
+$two-elevenths:     18.181818181818%;
+$three-elevenths:   27.272727272727%;
+$four-elevenths:    36.363636363636%;
+$five-elevenths:    45.454545454545%;
+$six-elevenths:     54.545454545455%;
+$seven-elevenths:   63.636363636364%;
+$eight-elevenths:   72.727272727273%;
+$nine-elevenths:    81.818181818182%;
+$ten-elevenths:     90.909090909091%;
+$eleven-elevenths:  $one-whole;
+
+// twelfths
+$one-twelfth:        8.33333333333333%;
+$two-twelfths:       $one-sixth;
+$three-twelfths:     $one-fourth;
+$four-twelfths:      $one-third;
+$five-twelfths:      41.6666666666667%;
+$six-twelfths:       $one-half;
+$seven-twelfths:     58.3333333333333%;
+$eight-twelfths:     $two-thirds;
+$nine-twelfths:      $three-fourths;
+$ten-twelfths:       $five-sixths;
+$eleven-twelfths:    91.6666666666666%;
+$twelve-twelfths:    $one-whole;

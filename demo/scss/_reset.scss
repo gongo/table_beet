@@ -1,0 +1,77 @@
+// =============================================
+//         CSS Reset by Gary Hepting 
+//          Last Updated:2013-1-3
+// =============================================
+
+
+
+
+// =======================================================
+//               the better box model
+// =======================================================
+//
+//
+//     E   L   E   M   E   N   T      W   I   D   T   H
+//  |----------------------------------------------------|
+//  |                  B  O  R  D  E  R                  |
+//  |   |--------------------------------------------|   |
+//  | B |               P A D D I N G                | B |
+//  |   |   |------------------------------------|   |   |
+//  | O | P |                                    | P | O |
+//  |   | A |                                    | A |   |
+//  | R | D |                                    | D | R |
+//  |   | D |           C O N T E N T            | D |   |
+//  | D | I |                                    | I | D |
+//  |   | N |                                    | N |   |
+//  | E | G |                                    | G | E |
+//  |   |   |------------------------------------|   |   |
+//  | R |               P A D D I N G                | R |
+//  |   |--------------------------------------------|   |
+//  |                  B  O  R  D  E  R                  |
+//  | ---------------------------------------------------|
+//
+//  NOTE: Padding and border are calculated within an 
+//        element's specified width instead of its total 
+//        width being increased by these properties
+//
+//
+// =======================================================
+
+*, *:after, *:before {
+  -ms-box-sizing:border-box;              // IE 10+
+  -o-box-sizing:border-box;               // Opera
+  -moz-box-sizing:border-box;             // Firefox
+  -webkit-box-sizing:border-box;          // Webkit (Safari, Chrome, etc)
+  box-sizing:border-box;                  // IE 8-9 & Other
+  *behavior: url(js/libs/boxsizing.htc);  // IE 6-7  -- Thank Schepp for the polyfill for legacy IE browsers: https://github.com/Schepp/box-sizing-polyfill
+}
+
+
+
+
+///////////////////////
+//  optimized reset  //
+///////////////////////
+html, body, div, span, 
+h1, h2, h3, h4, h5, h6, p, 
+ol, ul, li, dl, dt, dd, 
+a, img, blockquote, cite, 
+em, small, strong, b, u, i, time, address, center, 
+form, fieldset, legend, label, input, textarea, select, button, 
+table, caption, tbody, tfoot, thead, tr, th, td, 
+header, footer, aside, menu, nav, section, article, details, 
+pre, code, iframe, object, canvas, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+
+
+
+///////////////////////
+// HTML5 display fix //
+///////////////////////
+header, footer, aside, menu, nav, section, article, details {
+  display: block;
+}

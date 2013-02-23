@@ -1,0 +1,92 @@
+// =============================================
+//        Social icons by Gary Hepting 
+//           Last Updated:2013-1-18
+// =============================================
+
+
+
+
+.social-icon {
+  display: inline-block;
+  background-size: 100%;
+  width:1em;
+  height:1em;
+  text-indent: -999em;
+  text-align: left;
+  @include rounded(2px);
+  margin-bottom: 3px;
+  vertical-align: bottom;
+  @include drop-shadow(rgba(0,0,0,0.2), 5px, 0, 0); // color, alpha, blur, x, y
+  &.small {
+    width: 20px;
+    height: 20px;
+    @include rounded(3px);
+  }
+  &.medium {
+    width: 30px;
+    height: 30px;
+    @include rounded(5px);
+  }
+  &.large {
+    width: 48px;
+    height: 48px;
+    @include rounded(6px);
+  }
+  &.round {
+    @include rounded(50% 50%);
+  }
+  &.aboutme       { @include data-image("social-icons/aboutme.svg"); }
+  &.adn           { @include data-image("social-icons/adn.svg"); }
+  &.android       { @include data-image("social-icons/android.svg"); }
+  &.apple         { @include data-image("social-icons/apple.svg"); }
+  &.behance       { @include data-image("social-icons/behance.svg"); }
+  &.bitbucket     { @include data-image("social-icons/bitbucket.svg"); }
+  &.coderwall     { @include data-image("social-icons/coderwall.svg"); }
+  &.creativecloud { @include data-image("social-icons/creativecloud.svg"); }
+  &.dribbble      { @include data-image("social-icons/dribbble.svg"); }
+  &.dropbox       { @include data-image("social-icons/dropbox.svg"); }
+  &.evernote      { @include data-image("social-icons/evernote.svg"); }
+  &.facebook      { @include data-image("social-icons/facebook.svg"); }
+  &.flickr        { @include data-image("social-icons/flickr.svg"); }
+  &.foursquare    { @include data-image("social-icons/foursquare.svg"); }
+  &.git           { @include data-image("social-icons/git.svg"); }
+  &.github        { @include data-image("social-icons/github.svg"); }
+  &.googleplay    { @include data-image("social-icons/googleplay.svg"); }
+  &.googleplus    { @include data-image("social-icons/googleplus.svg"); }
+  &.html5         { @include data-image("social-icons/html5.svg"); }
+  &.icloud        { @include data-image("social-icons/icloud.svg"); }
+  &.instagram     { @include data-image("social-icons/instagram.svg"); }
+  &.lastfm        { @include data-image("social-icons/lastfm.svg"); }
+  &.linkedin      { @include data-image("social-icons/linkedin.svg"); }
+  &.mail          { @include data-image("social-icons/mail.svg"); }
+  &.mixi          { @include data-image("social-icons/mixi.svg"); }
+  &.msn           { @include data-image("social-icons/msn.svg"); }
+  &.pinterest     { @include data-image("social-icons/pinterest.svg"); }
+  &.pocket        { @include data-image("social-icons/pocketapp.svg"); }
+  &.quora         { @include data-image("social-icons/quora.svg"); }
+  &.orkut         { @include data-image("social-icons/orkut.svg"); }
+  &.mercurial     { @include data-image("social-icons/mercurial.svg"); }
+  &.rdio          { @include data-image("social-icons/rdio.svg"); }
+  &.renren        { @include data-image("social-icons/renren.svg"); }
+  &.rss           { @include data-image("social-icons/rss.svg"); }
+  &.skitch        { @include data-image("social-icons/skitch.svg"); }
+  &.skype         { @include data-image("social-icons/skype.svg"); }
+  &.soundcloud    { @include data-image("social-icons/soundcloud.svg"); }
+  &.spotify       { @include data-image("social-icons/spotify.svg"); }
+  &.stackoverflow { @include data-image("social-icons/stackoverflow.svg"); }
+  &.stumbleupon   { @include data-image("social-icons/stumbleupon.svg"); }
+  &.svn           { @include data-image("social-icons/svn.svg"); }
+  &.tent          { @include data-image("social-icons/tent.svg"); }
+  &.tripadvisor   { @include data-image("social-icons/tripadvisor.svg"); }
+  &.tumblr        { @include data-image("social-icons/tumblr.svg"); }
+  &.twitter       { @include data-image("social-icons/twitter.svg"); }
+  &.vimeo         { @include data-image("social-icons/vimeo.svg"); }
+  &.weibo         { @include data-image("social-icons/weibo.svg"); }
+  &.windows       { @include data-image("social-icons/windows.svg"); }
+  &.wordpress     { @include data-image("social-icons/wordpress.svg"); }
+  &.xing          { @include data-image("social-icons/xing.svg"); }
+  &.yelp          { @include data-image("social-icons/yelp.svg"); }
+  &.youtube       { @include data-image("social-icons/youtube.svg"); }
+  &.youversion    { @include data-image("social-icons/youversion.svg"); }
+  &.zerply        { @include data-image("social-icons/zerply.svg"); }
+}

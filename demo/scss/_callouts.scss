@@ -1,0 +1,51 @@
+// ===================================
+//              Panels
+// ===================================
+
+
+
+
+.callout {
+  position:relative;
+  word-wrap:break-word;
+  padding:1em;
+  background:$button-color;
+  border:1px solid $button-active;
+  color:$button-text;
+  margin-bottom:15px;
+  @include rounded($radius);
+  &.small {
+    font-size:0.8em;
+  }
+  &.large {
+    font-size:1.5em;
+  }
+  &.error {
+    background:$error-color;
+    border:1px solid darken($error-color, 10%);
+    color:$button-text;
+  }
+  &.warning {
+    background:$warning-color;
+    border:1px solid darken($warning-color, 10%);
+    color:$button-text;
+  }
+  &.success {
+    background:$success-color;
+    border:1px solid darken($success-color, 10%);
+    color:$button-text;
+  }
+  &.square {
+    @include rounded(0);
+  }
+  &.round {
+    @include rounded(9999px);
+  }
+  // content overrides
+  h1, h2, h3, h4, h5, h6 {
+    color:$button-text;
+  }
+  *:last-child {
+    margin-bottom:0;
+  }
+}

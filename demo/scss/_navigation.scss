@@ -1,0 +1,284 @@
+// ===================================
+//             Navigation
+// ===================================
+
+
+
+
+nav {
+  ul {
+    display:block;
+    list-style:none;
+    margin:0;
+    padding:0;
+    li {
+      display:block;
+      position:relative;
+      a, a:visited {
+        display:block;
+        width:100%;
+        word-wrap:break-word;
+        padding:0.25em 1em;
+        background:$button-color;
+        border:1px solid $border-color;
+        color:$button-text;
+        font-weight:bold;
+        font-size:1em;
+        text-decoration:none;
+        text-align:center;
+        cursor:pointer;
+        line-height:1.5;
+        @include transition(background-color 0.25s ease-out);
+        &:hover, &:focus {
+          background:$button-active;
+          border:1px solid $border-color;
+          text-decoration:none;
+        }
+        &.active {
+          &:hover, &:focus {
+            background:$button-active;
+          }
+        }
+      }
+      &.menu {
+        > a {
+          &:after {
+            content:'\f0d7'; // \f0c9
+            display: inline-block;
+            width: 1.1em;
+            margin-left:0.25em;
+            font-family: FontAwesome;
+            font-weight: normal;
+            font-style: normal;
+            font-size:1.1em;
+            text-decoration: inherit;
+            -webkit-font-smoothing: antialiased;
+            line-height: normal;
+            vertical-align: baseline;
+            background-image: none;
+            background-position: 0% 0%;
+            background-repeat: repeat;
+            margin-top: 0;
+          }
+        }
+      }
+      &.on {
+        a {
+          border-bottom-right-radius:0 !important;
+          border-bottom-left-radius:0 !important;
+        }
+        ul {
+          display:block !important;
+        }
+      }
+      &:first-child {
+        a, a:visited {
+          @include rounded($radius $radius 0 0);
+        }
+      }
+      &:last-child {
+        a, a:visited {
+          @include rounded(0 0 $radius $radius);
+        }
+      }
+    }
+    ul {
+      display:none;
+      position:absolute;
+      left:100%;
+      top:-1px;
+      width:auto;
+      z-index:99;
+      li {
+        a, a:visited {
+          @include rounded(0 !important);
+          background:lighten($button-color, 5%);
+          &:hover, &:active {
+            background:lighten($button-active, 5%);
+          }
+        }
+        &:first-child {
+          a, a:visited {
+            @include rounded(0 $radius 0 0 !important);
+          }
+        }
+        &:last-child {
+          a, a:visited {
+            @include rounded(0 0 $radius $radius !important);
+          }
+        }
+      }
+    }
+    // horizontal grid navigation
+    &.row {
+      li {
+        a, a:visited {
+          @include rounded(0);
+        }
+        &:first-child {
+          a, a:visited {
+            @include rounded($radius 0 0 $radius);
+          }
+        }
+        &:last-child {
+          a, a:visited {
+            @include rounded(0 $radius $radius 0);
+          }
+        }
+      }
+      ul {
+        display:none;
+        position:absolute;
+        left:auto;
+        top:auto;
+        min-width:100%;
+        z-index:99;
+        li {
+          a, a:visited {
+            @include rounded(0 !important);
+          }
+          &:last-child {
+            a, a:visited {
+              @include rounded(0 0 $radius $radius !important);
+            }
+          }
+        }
+      }
+    }
+  }
+  // horizontal inline navigation
+  &.inline {
+    width:auto;
+    ul {
+      font-size:0;
+      @include rounded($radius);
+      li {
+        font-size:$font-size;
+        display:inline-block;
+        white-space-collapse:discard;
+        float:none;
+        a, a:visited {
+
+        }
+        &:first-child {
+          a, a:visited {
+            @include rounded($radius 0 0 $radius);
+          }
+        }
+        &:last-child {
+          a, a:visited {
+            @include rounded(0 $radius $radius 0);
+          }
+        }
+        ul {
+          display:none;
+          position:absolute;
+          left:auto;
+          top:auto;
+          min-width:100%;
+          z-index:99;
+          li {
+            display:block;
+            a, a:visited {
+              @include rounded(0 !important);
+            }
+            &:last-child {
+              a, a:visited {
+                @include rounded(0 0 $radius $radius !important);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  // pagination
+  &.pagination {
+    ul {
+      margin:10px auto;
+      display:block;
+      list-style-type:none;
+      text-align:center;
+      li {
+        display:inline-block;
+        @include rounded(4px);
+        padding:0 3px 0 2px;
+        min-width:29px;
+        text-align:center;
+        a {
+          display:block;
+          font-size:1em;
+          line-height:1.5;
+          font-weight:bold;
+          color:$button-text;
+          text-decoration:none;
+          padding:0 3px;
+          @include rounded(4px);
+          &:hover, &:focus {
+            background:$button-active;
+            color:$button-text;
+          }
+        }
+        &.active {
+          a {
+            background:lighten(gray, 15%);
+            border-color:gray;
+            color:lighten(gray, 35%);
+            text-decoration:none;
+            &:hover, &:focus {
+              background:lighten(gray, 15%);
+              border-color:gray;
+              color:lighten(gray, 35%);
+            }
+          }
+        }
+        &.prev, &.next {
+          a {
+            padding:0 4px;
+            background:$button-color;
+            color:#fff;
+            &:hover, &:focus {
+              background:$button-active;
+            }
+          }
+        }
+        &.disabled {
+          a {
+            background:lighten(gray, 15%);
+            border-color:gray;
+            color:lighten(gray, 35%);
+            text-decoration:none;
+            &:hover, &:focus {
+              background:lighten(gray, 15%);
+              border-color:gray;
+              color:lighten(gray, 35%);
+            }
+          }
+        }
+        &:first-child {
+          a, a:visited {
+            @include rounded($radius);
+          }
+        }
+        &:last-child {
+          a, a:visited {
+            @include rounded($radius);
+          }
+        }
+      }
+    }
+  }
+}
+.no-js {
+  nav {
+    ul {
+      li.menu {
+        &:hover, &:focus {
+          ul {
+            display:block !important;
+          }
+        }
+      }
+    }
+  }
+}

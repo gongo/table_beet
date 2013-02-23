@@ -1,0 +1,293 @@
+///////////////////////
+//      desktop      //
+///////////////////////
+// @media only screen and (min-width:1024px) {
+    
+// }
+
+
+
+///////////////////////
+//       ipads       //
+///////////////////////
+// @media only screen and (min-width:768px) and (max-width:1024px) {
+    
+// }
+
+
+
+
+///////////////////////
+//   small tablets   //
+///////////////////////
+@media only screen and (max-width:767px) {
+  // responsive grid
+  .half, .halves,
+  .third, .thirds,
+  .fourth, .fourths,
+  .fifth, .fifths,
+  .sixth, .sixths,
+  .seventh, .sevenths,
+  .eighth, .eighths,
+  .ninth, .ninths,
+  .tenth, .tenths,
+  .eleventh, .elevenths,
+  .twelfth, .twelfths {
+    &:not(.small-tablet):not(.mobile) {
+      width:100% !important;
+      float:none;
+      clear:both;
+      // reset push
+      &.right-one,
+      &.right-two,
+      &.right-three,
+      &.right-four,
+      &.right-five,
+      &.right-six,
+      &.right-seven,
+      &.right-eight,
+      &.right-nine,
+      &.right-ten,
+      &.right-eleven  { left:0; }
+      // reset pull
+      &.left-one,
+      &.left-two,
+      &.left-three,
+      &.left-four,
+      &.left-five,
+      &.left-six,
+      &.left-seven,
+      &.left-eight,
+      &.left-nine,
+      &.left-ten,
+      &.left-eleven   { right:0; }
+      // reset offset
+      &.skip-one,
+      &.skip-two,
+      &.skip-three,
+      &.skip-four,
+      &.skip-five,
+      &.skip-six,
+      &.skip-seven,
+      &.skip-eight,
+      &.skip-nine,
+      &.skip-ten,
+      &.skip-eleven   { margin-left:0; }
+    }
+  }
+  nav:not(.pagination), nav.inline {
+    width:100%;
+    ul, ul.row {
+      li {
+        display:block;
+        width:100% !important;
+        &.menu {
+          > a {
+            &:after {
+              display:none !important;
+            }
+            &:before {
+              content:'\f0c9';
+              display: inline-block;
+              width: 1.1em;
+              margin-left:0.25em;
+              font-family: FontAwesome;
+              font-weight: normal;
+              font-style: normal;
+              font-size:1.1em;
+              text-decoration: inherit;
+              -webkit-font-smoothing: antialiased;
+              line-height: normal;
+              vertical-align: baseline;
+              background-image: none;
+              background-position: 0% 0%;
+              background-repeat: repeat;
+              margin-top: 0;
+            }
+          }
+        }
+        ul {
+          position:static;
+          @include filter-shadow(rgba(0,0,0,0), 0, 0, 0);
+          li {
+            &:first-child {
+              a, a:visited {
+                @include rounded(0 !important);
+              }
+            }
+            &:last-child {
+              a, a:visited {
+                @include rounded(0 !important);
+              }
+            }
+          }
+        }
+      }
+      &:last-child {
+        li {
+          &:last-child {
+            ul {
+              li {
+                &:last-child {
+                  a, a:visited {
+                    @include rounded(0 0 $radius $radius !important);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  nav:not(.pagination), nav.inline {
+    ul, ul.row {
+      li {
+        &:first-child {
+          > a, > , > a:visited {
+            @include rounded($radius $radius 0 0 !important);
+          }
+        }
+        &:last-child {
+          > a, > , > a:visited {
+            @include rounded(0 0 $radius $radius !important);
+          }
+          &.on {
+            > a, > , > a:visited {
+              border-bottom-right-radius:0 !important;
+              border-bottom-left-radius:0 !important;
+            }
+          }
+        }
+      }
+      li {
+        ul {
+          li {
+            a, a:visited {
+              @include rounded(0 !important);
+            }
+          }
+        }
+      }
+    }
+  }
+  .tabs:not(.small-tablet):not(.mobile):not(.vertical) {
+    > ul {
+      li {
+        float:none;
+        width:100%;
+        margin:0;
+        a {
+          @include rounded(0);
+          border-bottom:none;
+          &:before, &:after {
+            display:none !important;
+          }
+        }
+        &:first-child a {
+          @include rounded($radius $radius 0 0);
+        }
+      }
+    }
+  }
+  .no-padding-small-tablet {
+    padding:0;
+  }
+  .no-margin-small-tablet {
+    margin:0;
+  }
+}
+
+
+
+
+///////////////////////
+//     handhelds     //
+///////////////////////
+@media only screen and (max-width:480px) {
+  // responsive grid
+  .half, .halves,
+  .third, .thirds,
+  .fourth, .fourths,
+  .fifth, .fifths,
+  .sixth, .sixths,
+  .seventh, .sevenths,
+  .eighth, .eighths,
+  .ninth, .ninths,
+  .tenth, .tenths,
+  .eleventh, .elevenths,
+  .twelfth, .twelfths {
+    &:not(.mobile) {
+      width:100% !important;
+      float:none;
+      clear:both;
+      // reset push
+      &.right-one,
+      &.right-two,
+      &.right-three,
+      &.right-four,
+      &.right-five,
+      &.right-six,
+      &.right-seven,
+      &.right-eight,
+      &.right-nine,
+      &.right-ten,
+      &.right-eleven  { left:0; }
+      // reset pull
+      &.left-one,
+      &.left-two,
+      &.left-three,
+      &.left-four,
+      &.left-five,
+      &.left-six,
+      &.left-seven,
+      &.left-eight,
+      &.left-nine,
+      &.left-ten,
+      &.left-eleven   { right:0; }
+      // reset offset
+      &.skip-one,
+      &.skip-two,
+      &.skip-three,
+      &.skip-four,
+      &.skip-five,
+      &.skip-six,
+      &.skip-seven,
+      &.skip-eight,
+      &.skip-nine,
+      &.skip-ten,
+      &.skip-eleven   { margin-left:0; }
+    }
+  }
+  .tabs:not(.mobile) {
+    > ul {
+      li {
+        float:none;
+        width:100%;
+        a {
+          @include rounded(0);
+          border-bottom:none;
+        }
+        &:first-child a {
+          @include rounded($radius $radius 0 0);
+        }
+      }
+    }
+  }
+  .no-padding-mobile {
+    padding:0;
+  }
+  .no-margin-mobile {
+    margin:0;
+  }
+}
+
+
+
+
+///////////////////////
+//  small handhelds  //
+///////////////////////
+// @media only screen and (max-width:320px) {
+    
+// }

@@ -1,0 +1,101 @@
+// ===================================
+//             Modals
+// ===================================
+
+
+
+
+// .modal-ready {
+//   body, div.modal {
+//     @include transition(0.25s all ease-out);
+//   }
+//   #overlay {
+//     @include transition(0.2s all ease-in);
+//   }
+// }
+
+.modal-active {
+  body {
+    overflow:hidden;
+  }
+  .container {
+    // -webkit-filter:blur(3px);
+    // -moz-filter:blur(3px);
+    // -ms-filter:blur(3px);
+    // -o-filter:blur(3px);
+    // filter:blur(3px);
+  }
+  #overlay {
+    visibility:visible;
+    opacity:1;
+  }
+  div.modal.active {
+    visibility:visible;
+    opacity:1;
+  }
+}
+
+#overlay {
+  visibility:hidden;
+  opacity:0;
+  position:fixed;
+  top:0;
+  left:0;
+  bottom:0;
+  right:0;
+  z-index:98;
+  width:100%;
+  height:100%;
+  @include inner-shadow(#000, 200px, 0, 0);
+  @include gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.9));
+}
+
+div.modal {
+  visibility:hidden;
+  opacity:0;
+  position:fixed;
+  top:10%;
+  left:10%;
+  z-index:99;
+  max-width:80%;
+  max-height:80%;
+  overflow:hidden;
+  padding:10px;
+  background:#222;
+  background:rgba(0,0,0,0.4);
+  @include drop-shadow(rgb(50,50,50), 50px, 0, 0);
+  @include rounded($radius);
+  &.iframe {
+    overflow:hidden;
+    width:80%;
+    height:80%;
+  }
+  .modal-content {
+    position:relative;
+    overflow:auto;
+    width:100%;
+    height:100%;
+    background:#fff;
+    padding:25px;
+    @include rounded($radius);
+  }
+  .close, .fullscreen {
+    position:absolute;
+    z-index:100;
+    font-size:1.25em;
+    top:10px;
+    right:10px;
+    padding:5px;
+    cursor:pointer;
+    color:#888;
+    background:#fff;
+    @include rounded($radius);
+    &:hover, &:focus {
+      color:black;
+    }
+  }
+  .fullscreen {
+    right:auto;
+    left:10px;
+  }
+}

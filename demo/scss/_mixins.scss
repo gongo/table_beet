@@ -1,0 +1,197 @@
+// =============================================
+//        SCSS mixins by Gary Hepting 
+//          Last Updated:2013-1-21
+// =============================================
+
+
+
+
+// ====================
+//   custom functions
+// ====================
+
+// convert x,y to approximate degrees
+@function degrees($x, $y) {
+  @if ($x gt 0) {
+    @if ($y gt 0) {
+      @return 45;
+    } @elseif ($y == 0) {
+      @return 90;
+    } @else {
+      @return 315;
+    }
+  } @elseif ($x lt 0) {
+    @if ($y gt 0) {
+      @return 135;
+    } @elseif ($y == 0) {
+      @return 270;
+    } @else {
+      @return 225;
+    }
+  } @else {
+    @return 0;
+  }
+}
+
+// strip unit of measurement from a value
+@function numericvalue($val){
+  $unit: unit($val);
+  $number: $val / ($val * 0 + 1);
+  @return $number;
+}
+
+// ====================
+//      utilities
+// ====================
+
+// inline image with fallback support for IE 7-
+@mixin data-image($file) {
+  background-image:url('../images/#{$file}');       // fallback
+  background-image:inline-image($file);             // data URI
+  *background-image:url('../images/#{$file}');      // IE7- hack
+}
+
+// // vertical gradient with support for IE 6-8 & 10
+// @mixin vertical-gradient($startColor, $endColor) {
+//   background:$endColor;
+//   @include background-image(linear-gradient($startColor, $endColor));
+//   @include filter-gradient($startColor, $endColor);
+// }
+
+// // horizontal gradient with support for IE 6-8 & 10
+// @mixin horizontal-gradient($startColor, $endColor) {
+//   background:$endColor;
+//   @include background-image(linear-gradient(left, $startColor, $endColor));
+//   @include filter-gradient($startColor, $endColor, 1);
+// }
+
+// vertical gradient
+@mixin gradient($startColor:$white, $endColor:$gray-2) {
+  background:$startColor; // fallback
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{ie-hex-str($startColor)}', endColorstr='#{ie-hex-str($endColor)}',GradientType=0 ); // IE 6-8
+  background:-ms-linear-gradient(top, $startColor 0%, $endColor 100%); // IE 10+
+  background:-o-linear-gradient(top, $startColor 0%, $endColor 100%); // Opera
+  background:-moz-linear-gradient(top, $startColor 0%, $endColor 100%); // Firefox
+  background:-webkit-gradient(linear, left top, left bottom, color-stop(0%, $startColor), color-stop(100%, $endColor));  // Webkit (Safari, Chrome, other)
+  background:-webkit-linear-gradient(top, $startColor 0%, $endColor 100%);  // Webkit (Safari, Chrome, other)
+  background:linear-gradient(to bottom, $startColor 0%, $endColor 100%);
+}
+
+// box shadow
+@mixin drop-shadow($color:rgba(0,0,0,0.2), $blur:0, $x:0, $y:0) { // color, blur, x, y
+  -ms-box-shadow:$x $y $blur $color; // IE10+
+  @if ($x == 0 and $y == 0) { // non directional glow
+    filter: Glow(color=#{ie-hex-str($color)},strength=#{numericvalue($blur)});
+    -ms-filter: glow(color=#{ie-hex-str($color)},strength=#{numericvalue($blur)});
+  } @else {
+    -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=#{numericvalue($blur)}, Direction=#{degrees($x, $y)}, Color='#{ie-hex-str($color)}')"; // IE8
+    filter: progid:DXImageTransform.Microsoft.Shadow(Strength=#{numericvalue($blur)}, Direction=#{degrees($x, $y)}, Color='#{ie-hex-str($color)}'); // IE7-
+  }
+  -o-box-shadow:$x $y $blur $color; // Opera
+  -moz-box-shadow:$x $y $blur $color; // Firefox
+  -webkit-box-shadow:$x $y $blur $color; // Webkit (Safari, Chrome, other)
+  box-shadow:$x $y $blur $color;
+}
+// filter drop shadow
+@mixin filter-shadow($color:rgba(0,0,0,0.2), $blur:0, $x:0, $y:0) { // color, blur, x, y
+  -ms-filter: drop-shadow($x $y $blur $color); // IE9+
+  -o-filter: drop-shadow($x $y $blur $color); // Opera
+  -moz-filter: drop-shadow($x $y $blur $color); // Firefox
+  -webkit-filter: drop-shadow($x $y $blur $color); // Webkit (Safari, Chrome, other)
+  filter: drop-shadow($x $y $blur $color);
+}
+
+// inner box shadow
+@mixin inner-shadow($color, $blur:0, $x:0, $y:0) { // color, blur, x, y
+  -ms-box-shadow:inset $x $y $blur $color; // IE10+
+  -ms-filter: "progid:DXImageTransform.Microsoft.Shadow(Strength=#{$blur}, Direction=135, Color='#{ie-hex-str($color)}')"; // IE8
+  filter: progid:DXImageTransform.Microsoft.Shadow(Strength=#{$blur}, Direction=135, Color='#{ie-hex-str($color)}'); // IE7-
+  -o-box-shadow:inset $x $y $blur $color; // Opera
+  -moz-box-shadow:inset $x $y $blur $color; // Firefox
+  -webkit-box-shadow:inset $x $y $blur $color; // Webkit (Safari, Chrome, other)
+  box-shadow:inset $x $y $blur $color;
+}
+
+// transition
+@mixin transition($transition:all 0.2s) {
+  -ms-transition:$transition; // IE10+
+  -o-transition:$transition; // Opera
+  -moz-transition:$transition; // Firefox
+  -webkit-transition:$transition; // Webkit (Safari, Chrome, other)
+  transition:$transition;
+}
+
+// border radius
+@mixin rounded($radius:4px) {
+  -ms-border-radius:$radius; // IE10+
+  -o-border-radius:$radius; // Opera
+  -moz-border-radius:$radius; // Firefox
+  -webkit-border-radius:$radius; // Webkit (Safari, Chrome, other)
+  border-radius:$radius;
+}
+
+// rotate
+@mixin rotate($deg:0deg){
+  -ms-transform:rotate($deg); // IE10+
+  -o-transform:rotate($deg); // Opera
+  -moz-transform:rotate($deg); // Firefox
+  -webkit-transform:rotate($deg); // Webkit (Safari, Chrome, other)
+  transform:rotate($deg);
+}
+
+// scale
+@mixin scale($scale:0){
+  -ms-transform:scale($scale); // IE10+
+  -o-transform:scale($scale); // Opera
+  -moz-transform:scale($scale); // Firefox
+  -webkit-transform:scale($scale); // Webkit (Safari, Chrome, other)
+  transform:scale($scale);
+}
+
+// translate
+@mixin translate($x:0, $y:0){
+  -ms-transform:translate($x,$y); // IE10+
+  -o-transform:translate($x,$y); // Opera
+  -moz-transform:translate($x,$y); // Firefox
+  -webkit-transform:translate($x,$y); // Webkit (Safari, Chrome, other)
+  transform:translate($x,$y);
+}
+
+// transform (translate, rotate & scale)
+@mixin transform($x:0, $y:0, $scale:0, $deg:0deg){
+  -ms-transform:translate($x,$y) rotate($deg) scale($scale); // IE10+
+  -o-transform:translate($x,$y) rotate($deg) scale($scale); // Opera
+  -moz-transform:translate($x,$y) rotate($deg) scale($scale); // Firefox
+  -webkit-transform:translate($x,$y) rotate($deg) scale($scale); // Webkit (Safari, Chrome, other)
+  transform:translate($x,$y) rotate($deg) scale($scale);
+}
+
+// transform origin
+@mixin transform-origin($x:0, $y:0){
+  -ms-transform-origin:$x $y; // IE10+
+  -o-transform-origin:$x $y; // Opera
+  -moz-transform-origin:$x $y; // Firefox
+  -webkit-transform-origin:$x $y; // Webkit (Safari, Chrome, other)
+  transform-origin:$x $y;
+}
+
+
+
+
+// ====================
+//       fonts 
+// ====================
+
+// font stacks
+@mixin font-stack($primaryFont:"", $secondaryFont:"", $fallbackFonts:"Arial, Helvetica, Geneva, sans-serif") {
+  /* might add inline-font-files() at some point */
+  @if $secondaryFont != "" {
+    font-family:#{$primaryFont}, #{$secondaryFont}, #{$fallbackFonts};
+  } @else {
+    @if $primaryFont != "" {
+      font-family:#{$primaryFont}, #{$fallbackFonts};
+    } @else {
+      font-family:#{$fallbackFonts};
+    }
+  }
+}
