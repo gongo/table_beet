@@ -13,7 +13,7 @@ module TableBeet
     end
 
     def load_files
-      Dir.glob(@files)
+      Dir.glob(File.expand_path(@files))
     end
   end
 

@@ -19,5 +19,6 @@ Gem::Specification.new do |gem|
 
   gem.add_dependency 'turnip'
   gem.add_dependency 'slop'
+  gem.add_dependency 'method_source'
   gem.add_development_dependency 'debugger'
 end

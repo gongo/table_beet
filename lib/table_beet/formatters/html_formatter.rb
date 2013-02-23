@@ -6,6 +6,7 @@ require 'erb'
 module TableBeet
   module Formatters
     class HTMLFormatter < BaseFormatter
+
       def flush
         create_index
         create_metadata_dir
@@ -15,7 +16,6 @@ module TableBeet
 
         def create_index
           erb = ERB.new(File.read(template_output))
-          scope_names = @scopes.keys
           scopes = @scopes
 
           File.open(output, 'w') do |f|

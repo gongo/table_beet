@@ -55,8 +55,8 @@
           <ul class="list">
             <li>Scopes
               <ul>
-                <% scope_names.each do |scope_name| %>
-                <li><a href="#<%= scope_name %>"><%= scope_name %></a>
+                <% scopes.keys.each do |scope_name| %>
+                <li><a href="#<%= ERB::Util.h(scope_name) %>"><%= ERB::Util.h(scope_name) %></a>
                 <% end %>
               </ul>
             </li>
@@ -68,7 +68,7 @@
           <% scopes.each do |scope, steps| %>
           <div class="row">
             <div class="padded">
-              <h2><i class="icon-caret-right"></i> <a name="<%= scope %>"><%= scope %></a></h2>
+              <h2><i class="icon-caret-right"></i> <a name="<%= ERB::Util.h(scope) %>"><%= ERB::Util.h(scope) %></a></h2>
             </div>
           </div>
           <table>
@@ -81,8 +81,15 @@
             <tbody>
               <% steps.each do |step| %>
               <tr>
-                <th><%= step.name %></th>
-                <td><%= step.file %></td>
+                <th><%= ERB::Util.h(step.name) %></th>
+                <td>
+                  <p><a href="#modal-<%= step.id %>">
+                      <%= ERB::Util.h(step.file) %>
+                  </a></p>
+                  <div id="modal-<%= step.id %>" class="modal">
+                    <pre><code class="inline"><%= step.source %></code></pre>
+                  </div>
+                </td>
               </tr>
               <% end %>
             </tbody>
