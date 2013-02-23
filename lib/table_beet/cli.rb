@@ -7,7 +7,7 @@ module TableBeet
     USE_OPTIONS = {
       o: [:output, 'Output directory when choose "h" format', 'spec/step_document' ],
       s: [:files,  'Check step files', 'spec/steps/**/*steps.rb' ],
-      f: [:format, 'Choose a formatter [t]ext [j]son [h]tml', 't'],
+      f: [:format, 'Choose a formatter [t]ext [h]tml', 't'],
     }
 
     def initialize(opts = nil)

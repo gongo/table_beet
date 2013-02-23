@@ -8,6 +8,9 @@ module TableBeet
     class HTMLFormatter < BaseFormatter
 
       def flush
+        # TODO: uh..
+        Dir.mkdir @directory unless File.exists?(@directory)
+
         create_index
         create_metadata_dir
       end

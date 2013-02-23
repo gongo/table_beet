@@ -4,7 +4,12 @@ require 'table_beet/formatters/html_formatter'
 
 module TableBeet
   class Reporter
-    def self.build(config)
+    #
+    # @param  [Hash]  config
+    #                   :format => Output format ('t' or 'text' is plain text
+    #                                             'h' or 'html' is HTML)
+    #
+    def self.build(config = {})
       type   = config[:format]
       output = config[:output]
       formatter(type).new(TableBeet::World.scopes, output).flush
@@ -12,8 +17,10 @@ module TableBeet
 
     def self.formatter(type)
       case type
-      when 't'
+      when 't', 'text'
         TableBeet::Formatters::TextFormatter
+      when 'h', 'html'
+        TableBeet::Formatters::HTMLFormatter
       else
         TableBeet::Formatters::HTMLFormatter
       end
