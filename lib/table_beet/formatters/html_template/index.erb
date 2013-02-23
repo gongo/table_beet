@@ -84,7 +84,7 @@
                 <th class="step_name"><%= ERB::Util.h(step.name) %></th>
                 <td>
                   <p><a href="#modal-<%= step.id %>">
-                      <%= ERB::Util.h(step.file) %>
+                      <i class="icon-external-link icon-2x"></i> <%= ERB::Util.h(step.file) %>
                   </a></p>
                   <div id="modal-<%= step.id %>" class="modal">
                     <pre><code class="inline"><%= step.source %></code></pre>
@@ -99,8 +99,13 @@
         </section>
       </article>
 
-      <footer class="footer align-center">
-        <p>&copy; 2013 Wataru MIYAGUNI.</p>
+      <footer class="footer row">
+        <div class="one half align-left">
+          <p>&copy; 2013 Wataru MIYAGUNI.</p>
+        </div>
+        <div class="one half align-right">
+          <p>Powered by <a href="http://groundwork.sidereel.com/">GroundworkCSS</a></p>
+        </div>
       </footer>
     </div>
     <!-- scripts -->
