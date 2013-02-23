@@ -1,0 +1,69 @@
+// =============================================
+// Fallbacks for non-SVG support by Gary Hepting 
+//           Last Updated:2013-2-15
+// =============================================
+
+// variables & mixins
+@import "variables";
+@import "mixins";
+
+
+
+.social-icon {
+  width:48px;
+  height:48px;
+  &.aboutme       { @include data-image("social-icons/aboutme.png"); }
+  &.adn           { @include data-image("social-icons/adn.png"); }
+  &.android       { @include data-image("social-icons/android.png"); }
+  &.apple         { @include data-image("social-icons/apple.png"); }
+  &.behance       { @include data-image("social-icons/behance.png"); }
+  &.bitbucket     { @include data-image("social-icons/bitbucket.png"); }
+  &.coderwall     { @include data-image("social-icons/coderwall.png"); }
+  &.creativecloud { @include data-image("social-icons/creativecloud.png"); }
+  &.dribbble      { @include data-image("social-icons/dribbble.png"); }
+  &.dropbox       { @include data-image("social-icons/dropbox.png"); }
+  &.evernote      { @include data-image("social-icons/evernote.png"); }
+  &.facebook      { @include data-image("social-icons/facebook.png"); }
+  &.flickr        { @include data-image("social-icons/flickr.png"); }
+  &.foursquare    { @include data-image("social-icons/foursquare.png"); }
+  &.git           { @include data-image("social-icons/git.png"); }
+  &.github        { @include data-image("social-icons/github.png"); }
+  &.googleplay    { @include data-image("social-icons/googleplay.png"); }
+  &.googleplus    { @include data-image("social-icons/googleplus.png"); }
+  &.html5         { @include data-image("social-icons/html5.png"); }
+  &.icloud        { @include data-image("social-icons/icloud.png"); }
+  &.instagram     { @include data-image("social-icons/instagram.png"); }
+  &.lastfm        { @include data-image("social-icons/lastfm.png"); }
+  &.linkedin      { @include data-image("social-icons/linkedin.png"); }
+  &.mail          { @include data-image("social-icons/mail.png"); }
+  &.mixi          { @include data-image("social-icons/mixi.png"); }
+  &.msn           { @include data-image("social-icons/msn.png"); }
+  &.pinterest     { @include data-image("social-icons/pinterest.png"); }
+  &.pocket        { @include data-image("social-icons/pocketapp.png"); }
+  &.quora         { @include data-image("social-icons/quora.png"); }
+  &.orkut         { @include data-image("social-icons/orkut.png"); }
+  &.mercurial     { @include data-image("social-icons/mercurial.png"); }
+  &.rdio          { @include data-image("social-icons/rdio.png"); }
+  &.renren        { @include data-image("social-icons/renren.png"); }
+  &.rss           { @include data-image("social-icons/rss.png"); }
+  &.skitch        { @include data-image("social-icons/skitch.png"); }
+  &.skype         { @include data-image("social-icons/skype.png"); }
+  &.soundcloud    { @include data-image("social-icons/soundcloud.png"); }
+  &.spotify       { @include data-image("social-icons/spotify.png"); }
+  &.stackoverflow { @include data-image("social-icons/stackoverflow.png"); }
+  &.stumbleupon   { @include data-image("social-icons/stumbleupon.png"); }
+  &.svn           { @include data-image("social-icons/svn.png"); }
+  &.tent          { @include data-image("social-icons/tent.png"); }
+  &.tripadvisor   { @include data-image("social-icons/tripadvisor.png"); }
+  &.tumblr        { @include data-image("social-icons/tumblr.png"); }
+  &.twitter       { @include data-image("social-icons/twitter.png"); }
+  &.vimeo         { @include data-image("social-icons/vimeo.png"); }
+  &.weibo         { @include data-image("social-icons/weibo.png"); }
+  &.windows       { @include data-image("social-icons/windows.png"); }
+  &.wordpress     { @include data-image("social-icons/wordpress.png"); }
+  &.xing          { @include data-image("social-icons/xing.png"); }
+  &.yelp          { @include data-image("social-icons/yelp.png"); }
+  &.youtube       { @include data-image("social-icons/youtube.png"); }
+  &.youversion    { @include data-image("social-icons/youversion.png"); }
+  &.zerply        { @include data-image("social-icons/zerply.png"); }
+}

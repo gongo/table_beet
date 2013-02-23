@@ -1,0 +1,64 @@
+// =============================================
+//         IE hacks by Gary Hepting 
+//          Last Updated:2013-2-2
+// =============================================
+
+// variables & mixins
+@import "variables";
+@import "mixins";
+
+
+
+html {
+  &.lt-ie9 {
+    min-width:$max-width !important;
+    body {
+      width:auto !important;
+    }
+    .container {
+      width:auto !important;
+    }
+    // forms
+    input, select, textarea {
+      &:focus {
+        border-color:$button-active;
+      }
+      &[type=checkbox], &[type=radio] {
+        padding:0;
+        background:none;
+        border:none;
+        display:inline-block;
+        width:auto !important;
+        height:auto !important;
+        @include rounded(0);
+      }
+    }
+    // custom select box
+    span.select {
+      &:after {
+        display:none;
+      }
+      select {
+        padding:0;
+        height:2.1em;
+        vertical-align:top;
+        &:focus {
+          border:1px solid $button-active;
+          @include drop-shadow(#fff, 0, 0, 0);
+        }
+      }
+    }
+    // modals
+    div.modal {
+      .close, .fullscreen {
+        padding:6px 7px;
+        top:2px;
+        right:2px;
+      }
+      .fullscreen {
+        right:auto;
+        left:2px;
+      }
+    }
+  }
+}

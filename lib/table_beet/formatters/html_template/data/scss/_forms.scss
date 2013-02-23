@@ -1,0 +1,164 @@
+// ===================================
+//        GroundworkCSS Forms
+// ===================================
+
+
+
+form {
+
+}
+fieldset {
+  border:1px solid $border-color;
+  padding:$gutter;
+  legend {
+    font-weight:900;
+    font-size:0.8em;
+    color:darken($background-color, 35%);
+    margin-bottom:0;
+  }
+}
+label {
+  display:block;
+  padding:0.4em 0.2em;
+}
+input, select, textarea {
+  display:block;
+  width:100%;
+  margin:0;
+  padding:0.4em;
+  font-family:monospace;
+  font-size:1em;
+  line-height:1.5;
+  height:2.25em;
+  background:white;
+  border:1px solid $border-color;
+  @include rounded($radius);
+  &[type=checkbox], &[type=radio] {
+    display:inline-block;
+    width:1em;
+    height:1em;
+    margin:0 0 0 0.2em;
+    background:white;
+    border:1px solid $border-color;
+    @include rounded($radius);
+  }
+  &.error, &.invalid {
+    color:$error-color;
+    background:lighten($error-color, 62%);
+    border-color:$error-color;
+  }
+  &.success, &.valid {
+    color:$success-color;
+    background:lighten($success-color, 62%);
+    border-color:$success-color;
+  }
+}
+.error, .invalid {
+  input, select, textarea {
+    color:$error-color;
+    background:lighten($error-color, 62%);
+    border-color:$error-color;
+  }
+  .prefix, .suffix {
+    color:lighten($error-color, 62%);;
+    background:$error-color;
+    border-color:$error-color;
+  }
+}
+.success, .valid {
+  input, select, textarea {
+    color:$success-color;
+    background:lighten($success-color, 56%);
+    border-color:$success-color;
+  }
+  .prefix, .suffix {
+    color:lighten($success-color, 62%);;
+    background:$success-color;
+    border-color:$success-color;
+  }
+}
+textarea {
+  height:10em;
+  &:focus {
+    @include drop-shadow(rgba(0,0,0,0.125), 15px, 0, 0);
+  }
+}
+span.select select {
+  &:focus {
+    @include drop-shadow(rgba(0,0,0,0.35), 15px, 0, 0);
+  }
+}
+span.select {
+  display:block;
+  color:gray;
+  background:white;
+  border:1px solid $border-color;
+  position:relative;
+  @include rounded($radius);
+  &:after {
+    content:'...';
+    display:block;
+    width:1.5em;
+    text-align:center;
+    height:100%;
+    position:absolute;
+    z-index:1;
+    font-size:1.5em;
+    line-height:1.25;
+    top:0;
+    right:0;
+    background:darken(white, 12.5%);
+  }
+  select {
+    -ms-appearance:none;
+    -o-appearance:none;
+    -moz-appearance:none;
+    -webkit-appearance:none;
+    appearance:none;
+    border:none;
+    background:none;
+    padding:0.4em;
+    font-family:monospace;
+    font-size:1em;
+    line-height:1.5;
+    height:2.25em;
+    padding-right:2.5em;
+    position:relative;
+    z-index:2;
+    &.unselected {
+      color:#999;
+    }
+  }
+}
+ul.radio-list {
+  list-style:none;
+  margin:0;
+  padding:0;
+}
+.prefix, .suffix {
+  display:block;
+  position:relative;
+  z-index:1;
+  width:100%;
+  overflow:hidden;
+  white-space:nowrap;
+  text-overflow:ellipsis;
+  margin:0;
+  padding:0.4em;
+  font-family:monospace;
+  font-size:1em;
+  line-height:1.25;
+  height:2.25em;
+  text-align:center;
+  color:gray;
+  background:darken(white, 12.5%);
+  border:1px solid darken(white, 17.5%);
+}
+.prefix {
+  left:2px;
+  @include rounded($radius 0 0 $radius);
+}
+.suffix {
+  left:-2px;
+  @include rounded(0 $radius $radius 0);
+}

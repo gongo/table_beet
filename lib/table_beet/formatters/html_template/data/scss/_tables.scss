@@ -1,0 +1,80 @@
+// ===================================
+//             Tables
+// ===================================
+
+
+
+
+table {
+  border:1px solid $border-color;
+  width:100%;
+  max-width:100%;
+  padding:0;
+  margin:0;
+  font-size:1em;
+  &.responsive {
+    table-layout:fixed;
+  }
+  // styles for cells
+  th, td {
+    padding:$gutter;
+    background:darken(white, 1%);
+    white-space:normal;
+    word-wrap:break-word;
+    text-align:left;
+  }
+  td {
+    font-size:0.9em;
+  }
+  // every other row
+  tr:nth-child(even) {
+    th, td {
+      background:darken(white, 5%);
+    }
+  }
+  // styles for thead
+  thead {
+    tr {
+      th {
+        font-size:1.1em;
+        font-weight:bold;
+      }
+      th, td {
+        background:$button-color;
+        color:$button-text;
+      }
+      td {
+        font-weight:normal;
+      }
+    }
+  }
+  tr {
+    td {
+
+    }
+  }
+  // styles for tbody
+  tbody {
+    tr {
+      th {
+        font-size:0.9em;
+      }
+      td {
+        
+      }
+    }
+  }
+  // styles for tfoot
+  tfoot {
+    tr {
+      th {
+        font-size:1em;
+      }
+      td {
+        background:lighten(gray, 37.5%);
+        color:darken(gray, 15%);
+        font-size:0.8em;
+      }
+    }
+  }
+}
