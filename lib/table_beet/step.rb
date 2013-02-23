@@ -17,7 +17,7 @@ module TableBeet
     end
 
     def source
-      @method.source
+      @method.comment + @method.source
     end
   end
 end

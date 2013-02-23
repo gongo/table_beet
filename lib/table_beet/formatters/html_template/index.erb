@@ -81,7 +81,7 @@
             <tbody>
               <% steps.each do |step| %>
               <tr>
-                <th><%= ERB::Util.h(step.name) %></th>
+                <th class="step_name"><%= ERB::Util.h(step.name) %></th>
                 <td>
                   <p><a href="#modal-<%= step.id %>">
                       <%= ERB::Util.h(step.file) %>
@@ -104,6 +104,13 @@
       </footer>
     </div>
     <!-- scripts -->
+    <script type="text/javascript" src="./js/plugins/jquery.orbit-1.4.0.js"></script>
     <script type="text/javascript" src="./js/groundwork.js"></script>
+    <script type="text/javascript">
+      $('th.step_name').each(function() {
+          var decoration = $(this).text().replace(/(:[\w]+)/g, function() { return "<code>" + RegExp.$1 + "</code>"; });
+          $(this).html(decoration);
+      });
+    </script>
   </body>
 </html>
