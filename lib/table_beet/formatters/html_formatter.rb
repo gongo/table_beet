@@ -9,7 +9,7 @@ module TableBeet
 
       def flush
         # TODO: uh..
-        Dir.mkdir @directory unless File.exists?(@directory)
+        Dir.mkdir directory unless File.exists?(directory)
 
         create_index
         create_metadata_dir
@@ -27,7 +27,7 @@ module TableBeet
         end
 
         def create_metadata_dir
-          FileUtils.copy_entry(template_metadata_dir, @directory)
+          FileUtils.copy_entry(template_metadata_dir, directory)
         end
 
         def template_dir
@@ -42,12 +42,16 @@ module TableBeet
           template_dir + '/data'
         end
 
+        def directory
+          @directory ||= 'spec/step_document'
+        end
+
         def output
-          @directory + '/index.html'
+          directory + '/index.html'
         end
 
         def metadata_dir
-          @directory + '/data'
+          directory + '/data'
         end
     end
   end

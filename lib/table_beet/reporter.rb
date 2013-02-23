@@ -6,8 +6,12 @@ module TableBeet
   class Reporter
     #
     # @param  [Hash]  config
-    #                   :format => Output format ('t' or 'text' is plain text
-    #                                             'h' or 'html' is HTML)
+    #                   :format => [String] Output format
+    #                                         't' or 'text' is plain text
+    #                                         'h' or 'html' is HTML
+    #
+    #                   :output => [String] Output directory path (glob pattern)
+    #                                       Only valid for 'html' format
     #
     def self.build(config = {})
       type   = config[:format]
