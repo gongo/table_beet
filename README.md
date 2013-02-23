@@ -1,6 +1,6 @@
 # TableBeet
 
-TableBeen is reference generator for [turnip](https://github.com/jnicklas/turnip) steps of existing.
+TableBeet is reference generator for [turnip](https://github.com/jnicklas/turnip) steps of existing.
 
 ## Installation
 
