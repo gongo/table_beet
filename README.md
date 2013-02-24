@@ -43,7 +43,7 @@ e.g.
 Add `(1)` and `(2)` line to your application's `spec_helper` file.
 
 ```ruby
-require 'table_beet'
+require 'table_beet' # (1)
 
 Dir.glob("spec/steps/**/*steps.rb") { |f| load f, true }
 
