@@ -94,10 +94,10 @@
               <tr>
                 <th class="step_name">I run :cmd</th>
                 <td>
-                  <p><a href="#modal--554177219391392260">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/backtick_steps.rb
+                  <p><a href="#modal--2797946864990813454">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/backtick_steps.rb:1
                   </a></p>
-                  <div id="modal--554177219391392260" class="modal">
+                  <div id="modal--2797946864990813454" class="modal">
                     <big><pre>step "I run :cmd" do |cmd|
   step('I attack it') if cmd == 'killall monsters'
 end
@@ -109,10 +109,10 @@ end
               <tr>
                 <th class="step_name">there are :count monkeys with :color hair</th>
                 <td>
-                  <p><a href="#modal-401219102354646796">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/more_steps.rb
+                  <p><a href="#modal--860134428058764238">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/more_steps.rb:1
                   </a></p>
-                  <div id="modal-401219102354646796" class="modal">
+                  <div id="modal--860134428058764238" class="modal">
                     <big><pre>step "there are :count monkeys with :color hair" do |count, color|
   @monkeys = Array.new(count) { color }
 end
@@ -124,388 +124,12 @@ end
               <tr>
                 <th class="step_name">there should be 3 monkeys with blue hair</th>
                 <td>
-                  <p><a href="#modal--3690596389724208148">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/more_steps.rb
+                  <p><a href="#modal-569809708097782370">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/more_steps.rb:5
                   </a></p>
-                  <div id="modal--3690596389724208148" class="modal">
+                  <div id="modal-569809708097782370" class="modal">
                     <big><pre>step "there should be 3 monkeys with blue hair" do
   @monkeys.should == [:blue, :blue, :blue]
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">there is a monster</th>
-                <td>
-                  <p><a href="#modal--166617068089185492">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal--166617068089185492" class="modal">
-                    <big><pre>step "there is a monster" do
-  @monster = 1
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">there is a strong monster</th>
-                <td>
-                  <p><a href="#modal--3441104604748702836">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal--3441104604748702836" class="modal">
-                    <big><pre>step "there is a strong monster" do
-  @monster = 2
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">I attack it</th>
-                <td>
-                  <p><a href="#modal--1313019595538240468">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal--1313019595538240468" class="modal">
-                    <big><pre>step "I attack it" do
-  @monster -= 1
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">it should die</th>
-                <td>
-                  <p><a href="#modal--3374092624086897076">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal--3374092624086897076" class="modal">
-                    <big><pre>step "it should die" do
-  @monster.should eq(0)
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">this is ambiguous</th>
-                <td>
-                  <p><a href="#modal-86235405135195916">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal-86235405135195916" class="modal">
-                    <big><pre>step "this is ambiguous" do
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">this is :ambiguous</th>
-                <td>
-                  <p><a href="#modal-3433179973015646540">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal-3433179973015646540" class="modal">
-                    <big><pre>step "this is :ambiguous" do
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">there is a monster called :name</th>
-                <td>
-                  <p><a href="#modal--3869639989242246340">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal--3869639989242246340" class="modal">
-                    <big><pre>step "there is a monster called :name" do |name|
-  @monster_name = name
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">it should be called &quot;John Smith&quot;</th>
-                <td>
-                  <p><a href="#modal-1869163264200267612">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal-1869163264200267612" class="modal">
-                    <big><pre>step 'it should be called "John Smith"' do
-  @monster_name.should == "John Smith"
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">it should be called &quot;John&quot;</th>
-                <td>
-                  <p><a href="#modal--372155137961645076">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal--372155137961645076" class="modal">
-                    <big><pre>step 'it should be called "John"' do
-  @monster_name.should == "John"
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">it should be called &quot;O'Flannahan&quot;</th>
-                <td>
-                  <p><a href="#modal-329591832636819980">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal-329591832636819980" class="modal">
-                    <big><pre>step 'it should be called "O\'Flannahan"' do
-  @monster_name.should == "O'Flannahan"
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">I change its name to :empty_string</th>
-                <td>
-                  <p><a href="#modal-3567988785767938988">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal-3567988785767938988" class="modal">
-                    <big><pre>step "I change its name to :empty_string" do |empty_string|
-  @monster_name = empty_string
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">it should be nameless</th>
-                <td>
-                  <p><a href="#modal-1815358382749420300">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal-1815358382749420300" class="modal">
-                    <big><pre>step "it should be nameless" do
-  @monster_name.should == ""
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">there is a monster with :count hitpoints</th>
-                <td>
-                  <p><a href="#modal-3004354000136565932">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal-3004354000136565932" class="modal">
-                    <big><pre>step "there is a monster with :count hitpoints" do |count|
-  @monster = count
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">I attack the monster and do :count points damage</th>
-                <td>
-                  <p><a href="#modal--3866211823391645284">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal--3866211823391645284" class="modal">
-                    <big><pre>step "I attack the monster and do :count points damage" do |count|
-  @monster -= count
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">the monster should be alive</th>
-                <td>
-                  <p><a href="#modal--1645655372408782404">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal--1645655372408782404" class="modal">
-                    <big><pre>step "the monster should be alive" do
-  @monster.should > 0
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">the monster should be dead</th>
-                <td>
-                  <p><a href="#modal-3012777275329620268">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal-3012777275329620268" class="modal">
-                    <big><pre>step "the monster should be dead" do
-  @monster.should <= 0
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">there are the following monsters:</th>
-                <td>
-                  <p><a href="#modal--1268189298116918708">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal--1268189298116918708" class="modal">
-                    <big><pre>step "there are the following monsters:" do |table|
-  @monsters = {}
-  table.hashes.each do |hash|
-    @monsters[hash['Name']] = hash['Hitpoints'].to_i
-  end
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">:name should have :count hitpoints</th>
-                <td>
-                  <p><a href="#modal--2945917748465572884">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal--2945917748465572884" class="modal">
-                    <big><pre>step ":name should have :count hitpoints" do |name, count|
-  @monsters[name].should eq(count.to_i)
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">the monster sings the following song</th>
-                <td>
-                  <p><a href="#modal--1022834729285943540">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal--1022834729285943540" class="modal">
-                    <big><pre>step "the monster sings the following song" do |song|
-  @song = song
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">the song should have :count lines</th>
-                <td>
-                  <p><a href="#modal-811604565942519980">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal-811604565942519980" class="modal">
-                    <big><pre>step "the song should have :count lines" do |count|
-  @song.to_s.split("\n").length.should eq(count)
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">it should be strong/tough</th>
-                <td>
-                  <p><a href="#modal--1428056804255129284">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal--1428056804255129284" class="modal">
-                    <big><pre>step "it should be strong/tough" do
-  @monster.should >= 2
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">it should be (a) badass</th>
-                <td>
-                  <p><a href="#modal-527729183619158460">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal-527729183619158460" class="modal">
-                    <big><pre>step "it should be (a) badass" do
-  @monster.should >= 2
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">it should be terrible(st)</th>
-                <td>
-                  <p><a href="#modal-995341278923167436">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal-995341278923167436" class="modal">
-                    <big><pre>step "it should be terrible(st)" do
-  @monster.should >= 2
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">it (should) have/has :count (terrifying) hitpoint(s)</th>
-                <td>
-                  <p><a href="#modal-2142308062943233084">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal-2142308062943233084" class="modal">
-                    <big><pre>step "it (should) have/has :count (terrifying) hitpoint(s)" do |count|
-  @monster.should == count
-end
-</pre></big>
-                  </div>
-                </td>
-              </tr>
-              
-              <tr>
-                <th class="step_name">raise error</th>
-                <td>
-                  <p><a href="#modal-140537014865754428">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/steps.rb
-                  </a></p>
-                  <div id="modal-140537014865754428" class="modal">
-                    <big><pre>step "raise error" do
-  raise "foobar"
 end
 </pre></big>
                   </div>
@@ -532,10 +156,10 @@ end
               <tr>
                 <th class="step_name">the monster has an alignment</th>
                 <td>
-                  <p><a href="#modal-2240579479634044665">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/alignment_steps.rb
+                  <p><a href="#modal-9012759687036727">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/alignment_steps.rb:12
                   </a></p>
-                  <div id="modal-2240579479634044665" class="modal">
+                  <div id="modal-9012759687036727" class="modal">
                     <big><pre>  step "the monster has an alignment" do
     self.alignment = 'Evil'
   end
@@ -547,10 +171,10 @@ end
               <tr>
                 <th class="step_name">that alignment should be :alignment</th>
                 <td>
-                  <p><a href="#modal--234273755357344327">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/alignment_steps.rb
+                  <p><a href="#modal--1303102363377946537">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/alignment_steps.rb:4
                   </a></p>
-                  <div id="modal--234273755357344327" class="modal">
+                  <div id="modal--1303102363377946537" class="modal">
                     <big><pre>  step "that alignment should be :alignment" do |expected_alignment|
     alignment.should eq(expected_alignment)
   end
@@ -579,10 +203,10 @@ end
               <tr>
                 <th class="step_name">the monster has an alignment</th>
                 <td>
-                  <p><a href="#modal-3510970078028104487">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/alignment_steps.rb
+                  <p><a href="#modal-3885814662524939795">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/alignment_steps.rb:20
                   </a></p>
-                  <div id="modal-3510970078028104487" class="modal">
+                  <div id="modal-3885814662524939795" class="modal">
                     <big><pre>  step "the monster has an alignment" do
     self.alignment = 'Neutral'
   end
@@ -594,10 +218,10 @@ end
               <tr>
                 <th class="step_name">that alignment should be :alignment</th>
                 <td>
-                  <p><a href="#modal-1544454408699990471">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/alignment_steps.rb
+                  <p><a href="#modal--2648560428445308269">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/alignment_steps.rb:4
                   </a></p>
-                  <div id="modal-1544454408699990471" class="modal">
+                  <div id="modal--2648560428445308269" class="modal">
                     <big><pre>  step "that alignment should be :alignment" do |expected_alignment|
     alignment.should eq(expected_alignment)
   end
@@ -626,10 +250,10 @@ end
               <tr>
                 <th class="step_name">an auto-loaded step is available</th>
                 <td>
-                  <p><a href="#modal-817440814613388647">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/autoload_steps.rb
+                  <p><a href="#modal-1917634844994011418">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/autoload_steps.rb:2
                   </a></p>
-                  <div id="modal-817440814613388647" class="modal">
+                  <div id="modal-1917634844994011418" class="modal">
                     <big><pre>  step 'an auto-loaded step is available' do
     true.should be
   end
@@ -658,10 +282,10 @@ end
               <tr>
                 <th class="step_name">there is a knight</th>
                 <td>
-                  <p><a href="#modal--3763239972541627857">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/knight_steps.rb
+                  <p><a href="#modal--1726421211313105945">
+                      <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:18
                   </a></p>
-                  <div id="modal--3763239972541627857" class="modal">
+                  <div id="modal--1726421211313105945" class="modal">
                     <big><pre>  step "there is a knight" do
     self.knight = Knight.new
   end
@@ -673,10 +297,10 @@ end
               <tr>
                 <th class="step_name">the knight is alive</th>
                 <td>
-                  <p><a href="#modal-1570578721747690559">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/knight_steps.rb
+                  <p><a href="#modal--2249247372877443609">
+                      <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:22
                   </a></p>
-                  <div id="modal-1570578721747690559" class="modal">
+                  <div id="modal--2249247372877443609" class="modal">
                     <big><pre>  step "the knight is alive" do
     knight.should be_alive
   end
@@ -688,10 +312,10 @@ end
               <tr>
                 <th class="step_name">the knight is dead</th>
                 <td>
-                  <p><a href="#modal-1501638600919287295">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/knight_steps.rb
+                  <p><a href="#modal-3938587830415297607">
+                      <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:26
                   </a></p>
-                  <div id="modal-1501638600919287295" class="modal">
+                  <div id="modal-3938587830415297607" class="modal">
                     <big><pre>  step "the knight is dead" do
     knight.should_not be_alive
   end
@@ -703,10 +327,10 @@ end
               <tr>
                 <th class="step_name">there is a knight</th>
                 <td>
-                  <p><a href="#modal-3284577182738406988">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/knight_steps.rb
+                  <p><a href="#modal--2224973584238277625">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/knight_steps.rb:18
                   </a></p>
-                  <div id="modal-3284577182738406988" class="modal">
+                  <div id="modal--2224973584238277625" class="modal">
                     <big><pre>  step "there is a knight" do
     self.knight = Knight.new
   end
@@ -718,10 +342,10 @@ end
               <tr>
                 <th class="step_name">the knight is alive</th>
                 <td>
-                  <p><a href="#modal--744948482767297364">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/knight_steps.rb
+                  <p><a href="#modal-1747679040267809415">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/knight_steps.rb:22
                   </a></p>
-                  <div id="modal--744948482767297364" class="modal">
+                  <div id="modal-1747679040267809415" class="modal">
                     <big><pre>  step "the knight is alive" do
     knight.should be_alive
   end
@@ -733,10 +357,10 @@ end
               <tr>
                 <th class="step_name">the knight is dead</th>
                 <td>
-                  <p><a href="#modal-2258569151294727212">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/knight_steps.rb
+                  <p><a href="#modal--2202131496191305561">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/knight_steps.rb:26
                   </a></p>
-                  <div id="modal-2258569151294727212" class="modal">
+                  <div id="modal--2202131496191305561" class="modal">
                     <big><pre>  step "the knight is dead" do
     knight.should_not be_alive
   end
@@ -765,10 +389,10 @@ end
               <tr>
                 <th class="step_name">there is a dragon</th>
                 <td>
-                  <p><a href="#modal-2341933798276206464">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/dragon_steps.rb
+                  <p><a href="#modal--1607518262949103574">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/dragon_steps.rb:12
                   </a></p>
-                  <div id="modal-2341933798276206464" class="modal">
+                  <div id="modal--1607518262949103574" class="modal">
                     <big><pre>  step "there is a dragon" do
     self.dragon = 1
   end
@@ -780,10 +404,10 @@ end
               <tr>
                 <th class="step_name">the dragon attacks the knight</th>
                 <td>
-                  <p><a href="#modal-4120852916976645888">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/dragon_steps.rb
+                  <p><a href="#modal--1880487334341299606">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/dragon_steps.rb:16
                   </a></p>
-                  <div id="modal-4120852916976645888" class="modal">
+                  <div id="modal--1880487334341299606" class="modal">
                     <big><pre>  step "the dragon attacks the knight" do
     knight.attacked_for(dragon_attack)
   end
@@ -795,10 +419,10 @@ end
               <tr>
                 <th class="step_name">there is a knight</th>
                 <td>
-                  <p><a href="#modal-3820305186587494176">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/knight_steps.rb
+                  <p><a href="#modal--2663311426362486982">
+                      <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:18
                   </a></p>
-                  <div id="modal-3820305186587494176" class="modal">
+                  <div id="modal--2663311426362486982" class="modal">
                     <big><pre>  step "there is a knight" do
     self.knight = Knight.new
   end
@@ -810,10 +434,10 @@ end
               <tr>
                 <th class="step_name">the knight is alive</th>
                 <td>
-                  <p><a href="#modal--3322829109902953424">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/knight_steps.rb
+                  <p><a href="#modal-4296935948474306874">
+                      <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:22
                   </a></p>
-                  <div id="modal--3322829109902953424" class="modal">
+                  <div id="modal-4296935948474306874" class="modal">
                     <big><pre>  step "the knight is alive" do
     knight.should be_alive
   end
@@ -825,10 +449,10 @@ end
               <tr>
                 <th class="step_name">the knight is dead</th>
                 <td>
-                  <p><a href="#modal-4515096884127037936">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/knight_steps.rb
+                  <p><a href="#modal-4597106328064986522">
+                      <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:26
                   </a></p>
-                  <div id="modal-4515096884127037936" class="modal">
+                  <div id="modal-4597106328064986522" class="modal">
                     <big><pre>  step "the knight is dead" do
     knight.should_not be_alive
   end
@@ -857,10 +481,10 @@ end
               <tr>
                 <th class="step_name">the dragon breathes fire</th>
                 <td>
-                  <p><a href="#modal-3070435015132776418">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/dragon_steps.rb
+                  <p><a href="#modal-4558986778392065372">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/dragon_steps.rb:35
                   </a></p>
-                  <div id="modal-3070435015132776418" class="modal">
+                  <div id="modal-4558986778392065372" class="modal">
                     <big><pre>  step "the dragon breathes fire" do
     self.red_dragon = 1
   end
@@ -872,10 +496,10 @@ end
               <tr>
                 <th class="step_name">there is a dragon</th>
                 <td>
-                  <p><a href="#modal--1809542188905877950">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/dragon_steps.rb
+                  <p><a href="#modal-1426575558082763356">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/dragon_steps.rb:12
                   </a></p>
-                  <div id="modal--1809542188905877950" class="modal">
+                  <div id="modal-1426575558082763356" class="modal">
                     <big><pre>  step "there is a dragon" do
     self.dragon = 1
   end
@@ -887,10 +511,10 @@ end
               <tr>
                 <th class="step_name">the dragon attacks the knight</th>
                 <td>
-                  <p><a href="#modal--3070135331457667134">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/dragon_steps.rb
+                  <p><a href="#modal-4607882806511530652">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/dragon_steps.rb:16
                   </a></p>
-                  <div id="modal--3070135331457667134" class="modal">
+                  <div id="modal-4607882806511530652" class="modal">
                     <big><pre>  step "the dragon attacks the knight" do
     knight.attacked_for(dragon_attack)
   end
@@ -902,10 +526,10 @@ end
               <tr>
                 <th class="step_name">there is a knight</th>
                 <td>
-                  <p><a href="#modal-1399603664306800354">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/knight_steps.rb
+                  <p><a href="#modal--3262720006545921684">
+                      <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:18
                   </a></p>
-                  <div id="modal-1399603664306800354" class="modal">
+                  <div id="modal--3262720006545921684" class="modal">
                     <big><pre>  step "there is a knight" do
     self.knight = Knight.new
   end
@@ -917,10 +541,10 @@ end
               <tr>
                 <th class="step_name">the knight is alive</th>
                 <td>
-                  <p><a href="#modal-2757901351937119474">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/knight_steps.rb
+                  <p><a href="#modal-1119385918144588652">
+                      <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:22
                   </a></p>
-                  <div id="modal-2757901351937119474" class="modal">
+                  <div id="modal-1119385918144588652" class="modal">
                     <big><pre>  step "the knight is alive" do
     knight.should be_alive
   end
@@ -932,10 +556,10 @@ end
               <tr>
                 <th class="step_name">the knight is dead</th>
                 <td>
-                  <p><a href="#modal-3220109633995649970">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/knight_steps.rb
+                  <p><a href="#modal-654435283478867916">
+                      <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:26
                   </a></p>
-                  <div id="modal-3220109633995649970" class="modal">
+                  <div id="modal-654435283478867916" class="modal">
                     <big><pre>  step "the knight is dead" do
     knight.should_not be_alive
   end
@@ -964,10 +588,10 @@ end
               <tr>
                 <th class="step_name">visible callee</th>
                 <td>
-                  <p><a href="#modal-329312724656905166">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/step_calling_steps.rb
+                  <p><a href="#modal--1767298982645774641">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/step_calling_steps.rb:2
                   </a></p>
-                  <div id="modal-329312724656905166" class="modal">
+                  <div id="modal--1767298982645774641" class="modal">
                     <big><pre>  step 'visible callee' do
     @testing = 123
   end
@@ -979,10 +603,10 @@ end
               <tr>
                 <th class="step_name">a visible step call</th>
                 <td>
-                  <p><a href="#modal--2587055802928703858">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/step_calling_steps.rb
+                  <p><a href="#modal-3678681731009107887">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/step_calling_steps.rb:6
                   </a></p>
-                  <div id="modal--2587055802928703858" class="modal">
+                  <div id="modal-3678681731009107887" class="modal">
                     <big><pre>  step 'a visible step call' do
     step 'visible callee'
     @testing.should eq(123)
@@ -995,10 +619,10 @@ end
               <tr>
                 <th class="step_name">an invisible step call</th>
                 <td>
-                  <p><a href="#modal--3777928617361325458">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/step_calling_steps.rb
+                  <p><a href="#modal--701407596766906465">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/step_calling_steps.rb:11
                   </a></p>
-                  <div id="modal--3777928617361325458" class="modal">
+                  <div id="modal--701407596766906465" class="modal">
                     <big><pre>  step 'an invisible step call' do
     step 'this is an unimplemented step'
   end
@@ -1010,10 +634,10 @@ end
               <tr>
                 <th class="step_name">a global step call</th>
                 <td>
-                  <p><a href="#modal-3156235226402988174">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/step_calling_steps.rb
+                  <p><a href="#modal-328502525825278783">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/step_calling_steps.rb:15
                   </a></p>
-                  <div id="modal-3156235226402988174" class="modal">
+                  <div id="modal-328502525825278783" class="modal">
                     <big><pre>  step 'a global step call' do
     step 'there is a monster'
     @monster.should == 1
@@ -1026,10 +650,10 @@ end
               <tr>
                 <th class="step_name">an included call</th>
                 <td>
-                  <p><a href="#modal--133780261885801650">
-                      <i class="icon-book"></i> /Users/gongo/Develop/vendor/turnip/examples/steps/step_calling_steps.rb
+                  <p><a href="#modal-1591447172138331551">
+                      <i class="icon-book"></i> /tmp/turnip/examples/steps/step_calling_steps.rb:20
                   </a></p>
-                  <div id="modal--133780261885801650" class="modal">
+                  <div id="modal-1591447172138331551" class="modal">
                     <big><pre>  step 'an included call' do
     step 'an auto-loaded step is available'
   end
