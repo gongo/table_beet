@@ -52,14 +52,11 @@
 
       <article class="row">
         <aside class="one fourth padded border-right">
+          <h1><i class="icon-list-ul"></i> Scopes</h1>
           <ul class="list">
-            <li>Scopes
-              <ul>
-                <% scopes.keys.each do |scope_name| %>
-                <li><a href="#<%= ERB::Util.h(scope_name) %>"><%= ERB::Util.h(scope_name) %></a>
-                <% end %>
-              </ul>
-            </li>
+            <% scopes.keys.each do |scope_name| %>
+            <li class="big"><a href="#<%= ERB::Util.h(scope_name) %>"><%= ERB::Util.h(scope_name) %></a></li>
+            <% end %>
           </ul>
         </aside>
         <section class="three fourths padded">
@@ -84,10 +81,10 @@
                 <th class="step_name"><%= ERB::Util.h(step.name) %></th>
                 <td>
                   <p><a href="#modal-<%= step.id %>">
-                      <i class="icon-external-link icon-2x"></i> <%= ERB::Util.h(step.file) %>
+                      <i class="icon-book"></i> <%= ERB::Util.h(step.file) %>
                   </a></p>
                   <div id="modal-<%= step.id %>" class="modal">
-                    <pre><code class="inline"><%= step.source %></code></pre>
+                    <big><pre><%= step.source %></pre></big>
                   </div>
                 </td>
               </tr>

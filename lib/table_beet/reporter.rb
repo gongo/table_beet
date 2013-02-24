@@ -6,25 +6,22 @@ module TableBeet
   class Reporter
     #
     # @param  [Hash]  config
-    #                   :format => [String] Output format
-    #                                         't' or 'text' is plain text
-    #                                         'h' or 'html' is HTML
+    #                   :format => [Symbol] Output format
+    #                                         :t or :text is plain text
+    #                                         otherwise HTML
     #
-    #                   :output => [String] Output directory path (glob pattern)
-    #                                       Only valid for 'html' format
+    #                   :output => [String] Directory to output'
     #
     def self.build(config = {})
       type   = config[:format]
-      output = config[:output]
+      output = config[:output] || './stepdoc'
       formatter(type).new(TableBeet::World.scopes, output).flush
     end
 
     def self.formatter(type)
       case type
-      when 't', 'text'
+      when :t, :text
         TableBeet::Formatters::TextFormatter
-      when 'h', 'html'
-        TableBeet::Formatters::HTMLFormatter
       else
         TableBeet::Formatters::HTMLFormatter
       end

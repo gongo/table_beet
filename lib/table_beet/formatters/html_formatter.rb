@@ -43,7 +43,7 @@ module TableBeet
         end
 
         def directory
-          @directory ||= 'spec/step_document'
+          @directory
         end
 
         def output

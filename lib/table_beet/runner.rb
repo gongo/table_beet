@@ -1,26 +1,23 @@
 require 'table_beet/reporter'
+require 'table_beet/loader'
 
 module TableBeet
   class Runner
-    def initialize(config)
-      @files = config[:files]
-      @config = config.to_hash
+    def initialize(config = {})
+      @config = config
     end
 
     def run
-      TableBeet::Loader.load(load_files)
+      loader = TableBeet::Loader.new(@config)
+      number_of_load = loader.load
+
+      # TOOD logger..?
+      if number_of_load.zero?
+        puts "[warn] There are no loaded file with specified option."
+        puts "    finder => #{loader.display_pattern}"
+      end
+
       TableBeet::Reporter.build(@config)
-    end
-
-    def load_files
-      Dir.glob(File.expand_path(@files))
-    end
-  end
-
-  class Loader
-    def self.load(files)
-      # https://github.com/jnicklas/turnip#where-to-place-steps
-      files.each { |f| Kernel.load f, true }
     end
   end
 end

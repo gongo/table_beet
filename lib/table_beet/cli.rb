@@ -4,12 +4,6 @@ require 'slop'
 
 module TableBeet
   class CLI
-    USE_OPTIONS = {
-      o: [:output, 'Output directory when choose "h" format', 'spec/step_document' ],
-      s: [:files,  'Check step files', 'spec/steps/**/*steps.rb' ],
-      f: [:format, 'Choose a formatter [t]ext [h]tml', 't'],
-    }
-
     def initialize(opts = nil)
       @runner = TableBeet::Runner.new(opts || parse_options)
     end
@@ -27,10 +21,10 @@ module TableBeet
       def parse_options
         opts = Slop.parse(help: true, optional_arguments: true) do
           banner 'Usage: table_beet [options]'
-          USE_OPTIONS.each do |short, params|
-            long, desc, default = params
-            on short, long, desc + " (default: '#{default}')", default: default
-          end
+          on :output=, 'Directory to output (default: ./stepdoc)'
+          on :path=,   'Directory that contains step file. (default: ./spec)'
+          on :suffix=, 'Suffix of step file  (default: _steps.rb)'
+          on :n, :textmode, 'Display steps in plain text (No generate HTML)'
           on :v, :version, 'Print this version' do
             puts TableBeet::VERSION
             exit
@@ -38,7 +32,16 @@ module TableBeet
         end
 
         exit if opts.present?(:help)
-        opts
+
+        h = opts.to_hash
+        h.delete(:help)
+        h.delete(:version)
+
+        if opts.textmode?
+          h[:format] = :text
+        end
+
+        h
       end
   end
 end
