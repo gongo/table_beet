@@ -9,7 +9,6 @@ module TableBeet
       @method = method
       @name   = method.name.to_s
       @file, @lineno = method.source_location
-      @file = File.expand_path(@file)
     end
 
     def id
@@ -18,6 +17,10 @@ module TableBeet
 
     def source
       @method.comment + @method.source
+    end
+
+    def location
+      File.expand_path(@file) + ":" + @lineno.to_s
     end
   end
 end

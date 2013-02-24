@@ -81,7 +81,7 @@
                 <th class="step_name"><%= ERB::Util.h(step.name) %></th>
                 <td>
                   <p><a href="#modal-<%= step.id %>">
-                      <i class="icon-book"></i> <%= ERB::Util.h(step.file) %>
+                      <i class="icon-book"></i> <%= ERB::Util.h(step.location) %>
                   </a></p>
                   <div id="modal-<%= step.id %>" class="modal">
                     <big><pre><%= step.source %></pre></big>
