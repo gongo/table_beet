@@ -43,8 +43,18 @@
   <body>
     <header>
       <div class="container">
-        <div class="align-left">
-          <h1>TableBeet</h1>
+        <div class="row">
+          <div class="two sixth padded align-left">
+            <div class="align-left">
+              <h1>TableBeet</h1>
+            </div>
+          </div>
+          <div class="two sixth padded align-right" id="loading">
+            <i class="icon-spinner icon-2x icon-spin"  style="display: none;"></i>
+          </div>
+          <div class="two sixth padded align-right">
+            <input type="text" id="keyword" name="keyword" placeholder="Search step name">
+          </div>
         </div>
       </div>
     </header>
@@ -63,12 +73,12 @@
           <h1><i class="icon-th-large"></i> Step list</h1>
 
           <% scopes.each do |scope, steps| %>
-          <div class="row">
+          <div class="row scope_title">
             <div class="padded">
               <h2><i class="icon-caret-right"></i> <a name="<%= ERB::Util.h(scope) %>"><%= ERB::Util.h(scope) %></a></h2>
             </div>
           </div>
-          <table>
+          <table class="scope">
             <thead>
               <tr>
                 <th>Step name</th>
@@ -108,10 +118,38 @@
     <!-- scripts -->
     <script type="text/javascript" src="./js/plugins/jquery.orbit-1.4.0.js"></script>
     <script type="text/javascript" src="./js/groundwork.js"></script>
+    <script type="text/javascript" src="./js/jquery.quicksearch.js"></script>
     <script type="text/javascript">
-      $('th.step_name').each(function() {
-          var decoration = $(this).text().replace(/(:[\w]+)/g, function() { return "<code>" + RegExp.$1 + "</code>"; });
-          $(this).html(decoration);
+      $(function () {
+          $('th.step_name').each(function() {
+              var decoration = $(this).text().replace(/(:[\w]+)/g, function() { return "<code>" + RegExp.$1 + "</code>"; });
+              $(this).html(decoration);
+          });
+
+         $('input#keyword').quicksearch('table.scope tbody tr', {
+             'delay'    : 100,
+             'selector' : 'th',
+             'loader'   : 'div#loading i',
+
+             'show' : function () {
+                 $(this).show();
+                 var table = $(this).closest('table.scope');
+                 var title = table.prev('div.scope_title');
+                 table.show();
+                 title.show();
+             },
+
+             'hide' : function () {
+                 $(this).hide();
+                 if ($(this).siblings(':visible').size() == 0) {
+                     var table = $(this).closest('table.scope');
+                     var title = table.prev('div.scope_title');
+                     table.hide();
+                     title.hide();
+                 }
+             }
+         });
+
       });
     </script>
   </body>
