@@ -43,8 +43,18 @@
   <body>
     <header>
       <div class="container">
-        <div class="align-left">
-          <h1>TableBeet</h1>
+        <div class="row">
+          <div class="two sixth padded align-left">
+            <div class="align-left">
+              <h1>TableBeet</h1>
+            </div>
+          </div>
+          <div class="two sixth padded align-right" id="loading">
+            <i class="icon-spinner icon-2x icon-spin"  style="display: none;"></i>
+          </div>
+          <div class="two sixth padded align-right">
+            <input type="text" id="keyword" name="keyword" placeholder="Search step name">
+          </div>
         </div>
       </div>
     </header>
@@ -77,12 +87,12 @@
           <h1><i class="icon-th-large"></i> Step list</h1>
 
           
-          <div class="row">
+          <div class="row scope_title">
             <div class="padded">
               <h2><i class="icon-caret-right"></i> <a name="turnip">turnip</a></h2>
             </div>
           </div>
-          <table>
+          <table class="scope">
             <thead>
               <tr>
                 <th>Step name</th>
@@ -94,10 +104,10 @@
               <tr>
                 <th class="step_name">I run :cmd</th>
                 <td>
-                  <p><a href="#modal--2797946864990813454">
+                  <p><a href="#modal--3733498049482133299">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/backtick_steps.rb:1
                   </a></p>
-                  <div id="modal--2797946864990813454" class="modal">
+                  <div id="modal--3733498049482133299" class="modal">
                     <big><pre>step "I run :cmd" do |cmd|
   step('I attack it') if cmd == 'killall monsters'
 end
@@ -109,10 +119,10 @@ end
               <tr>
                 <th class="step_name">there are :count monkeys with :color hair</th>
                 <td>
-                  <p><a href="#modal--860134428058764238">
+                  <p><a href="#modal--3177810117678947139">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/more_steps.rb:1
                   </a></p>
-                  <div id="modal--860134428058764238" class="modal">
+                  <div id="modal--3177810117678947139" class="modal">
                     <big><pre>step "there are :count monkeys with :color hair" do |count, color|
   @monkeys = Array.new(count) { color }
 end
@@ -124,10 +134,10 @@ end
               <tr>
                 <th class="step_name">there should be 3 monkeys with blue hair</th>
                 <td>
-                  <p><a href="#modal-569809708097782370">
+                  <p><a href="#modal-1603344200670991517">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/more_steps.rb:5
                   </a></p>
-                  <div id="modal-569809708097782370" class="modal">
+                  <div id="modal-1603344200670991517" class="modal">
                     <big><pre>step "there should be 3 monkeys with blue hair" do
   @monkeys.should == [:blue, :blue, :blue]
 end
@@ -139,12 +149,12 @@ end
             </tbody>
           </table>
           
-          <div class="row">
+          <div class="row scope_title">
             <div class="padded">
               <h2><i class="icon-caret-right"></i> <a name="evil">evil</a></h2>
             </div>
           </div>
-          <table>
+          <table class="scope">
             <thead>
               <tr>
                 <th>Step name</th>
@@ -156,10 +166,10 @@ end
               <tr>
                 <th class="step_name">the monster has an alignment</th>
                 <td>
-                  <p><a href="#modal-9012759687036727">
+                  <p><a href="#modal--843411086477639330">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/alignment_steps.rb:12
                   </a></p>
-                  <div id="modal-9012759687036727" class="modal">
+                  <div id="modal--843411086477639330" class="modal">
                     <big><pre>  step "the monster has an alignment" do
     self.alignment = 'Evil'
   end
@@ -171,10 +181,10 @@ end
               <tr>
                 <th class="step_name">that alignment should be :alignment</th>
                 <td>
-                  <p><a href="#modal--1303102363377946537">
+                  <p><a href="#modal-4252883418422231326">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/alignment_steps.rb:4
                   </a></p>
-                  <div id="modal--1303102363377946537" class="modal">
+                  <div id="modal-4252883418422231326" class="modal">
                     <big><pre>  step "that alignment should be :alignment" do |expected_alignment|
     alignment.should eq(expected_alignment)
   end
@@ -186,12 +196,12 @@ end
             </tbody>
           </table>
           
-          <div class="row">
+          <div class="row scope_title">
             <div class="padded">
               <h2><i class="icon-caret-right"></i> <a name="neutral">neutral</a></h2>
             </div>
           </div>
-          <table>
+          <table class="scope">
             <thead>
               <tr>
                 <th>Step name</th>
@@ -203,10 +213,10 @@ end
               <tr>
                 <th class="step_name">the monster has an alignment</th>
                 <td>
-                  <p><a href="#modal-3885814662524939795">
+                  <p><a href="#modal--2577820657901653716">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/alignment_steps.rb:20
                   </a></p>
-                  <div id="modal-3885814662524939795" class="modal">
+                  <div id="modal--2577820657901653716" class="modal">
                     <big><pre>  step "the monster has an alignment" do
     self.alignment = 'Neutral'
   end
@@ -218,10 +228,10 @@ end
               <tr>
                 <th class="step_name">that alignment should be :alignment</th>
                 <td>
-                  <p><a href="#modal--2648560428445308269">
+                  <p><a href="#modal--4197628857491135028">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/alignment_steps.rb:4
                   </a></p>
-                  <div id="modal--2648560428445308269" class="modal">
+                  <div id="modal--4197628857491135028" class="modal">
                     <big><pre>  step "that alignment should be :alignment" do |expected_alignment|
     alignment.should eq(expected_alignment)
   end
@@ -233,12 +243,12 @@ end
             </tbody>
           </table>
           
-          <div class="row">
+          <div class="row scope_title">
             <div class="padded">
               <h2><i class="icon-caret-right"></i> <a name="autoload_steps">autoload_steps</a></h2>
             </div>
           </div>
-          <table>
+          <table class="scope">
             <thead>
               <tr>
                 <th>Step name</th>
@@ -250,10 +260,10 @@ end
               <tr>
                 <th class="step_name">an auto-loaded step is available</th>
                 <td>
-                  <p><a href="#modal-1917634844994011418">
+                  <p><a href="#modal--3832660451150088784">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/autoload_steps.rb:2
                   </a></p>
-                  <div id="modal-1917634844994011418" class="modal">
+                  <div id="modal--3832660451150088784" class="modal">
                     <big><pre>  step 'an auto-loaded step is available' do
     true.should be
   end
@@ -265,12 +275,12 @@ end
             </tbody>
           </table>
           
-          <div class="row">
+          <div class="row scope_title">
             <div class="padded">
               <h2><i class="icon-caret-right"></i> <a name="knight">knight</a></h2>
             </div>
           </div>
-          <table>
+          <table class="scope">
             <thead>
               <tr>
                 <th>Step name</th>
@@ -282,10 +292,10 @@ end
               <tr>
                 <th class="step_name">there is a knight</th>
                 <td>
-                  <p><a href="#modal--1726421211313105945">
+                  <p><a href="#modal--1787553457737001778">
                       <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:18
                   </a></p>
-                  <div id="modal--1726421211313105945" class="modal">
+                  <div id="modal--1787553457737001778" class="modal">
                     <big><pre>  step "there is a knight" do
     self.knight = Knight.new
   end
@@ -297,10 +307,10 @@ end
               <tr>
                 <th class="step_name">the knight is alive</th>
                 <td>
-                  <p><a href="#modal--2249247372877443609">
+                  <p><a href="#modal--1103969319968056306">
                       <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:22
                   </a></p>
-                  <div id="modal--2249247372877443609" class="modal">
+                  <div id="modal--1103969319968056306" class="modal">
                     <big><pre>  step "the knight is alive" do
     knight.should be_alive
   end
@@ -312,10 +322,10 @@ end
               <tr>
                 <th class="step_name">the knight is dead</th>
                 <td>
-                  <p><a href="#modal-3938587830415297607">
+                  <p><a href="#modal--2989028653737206610">
                       <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:26
                   </a></p>
-                  <div id="modal-3938587830415297607" class="modal">
+                  <div id="modal--2989028653737206610" class="modal">
                     <big><pre>  step "the knight is dead" do
     knight.should_not be_alive
   end
@@ -327,10 +337,10 @@ end
               <tr>
                 <th class="step_name">there is a knight</th>
                 <td>
-                  <p><a href="#modal--2224973584238277625">
+                  <p><a href="#modal--3099087014609398112">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/knight_steps.rb:18
                   </a></p>
-                  <div id="modal--2224973584238277625" class="modal">
+                  <div id="modal--3099087014609398112" class="modal">
                     <big><pre>  step "there is a knight" do
     self.knight = Knight.new
   end
@@ -342,10 +352,10 @@ end
               <tr>
                 <th class="step_name">the knight is alive</th>
                 <td>
-                  <p><a href="#modal-1747679040267809415">
+                  <p><a href="#modal--3278591306741876256">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/knight_steps.rb:22
                   </a></p>
-                  <div id="modal-1747679040267809415" class="modal">
+                  <div id="modal--3278591306741876256" class="modal">
                     <big><pre>  step "the knight is alive" do
     knight.should be_alive
   end
@@ -357,10 +367,10 @@ end
               <tr>
                 <th class="step_name">the knight is dead</th>
                 <td>
-                  <p><a href="#modal--2202131496191305561">
+                  <p><a href="#modal-2234457268091142464">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/knight_steps.rb:26
                   </a></p>
-                  <div id="modal--2202131496191305561" class="modal">
+                  <div id="modal-2234457268091142464" class="modal">
                     <big><pre>  step "the knight is dead" do
     knight.should_not be_alive
   end
@@ -372,12 +382,12 @@ end
             </tbody>
           </table>
           
-          <div class="row">
+          <div class="row scope_title">
             <div class="padded">
               <h2><i class="icon-caret-right"></i> <a name="dragon">dragon</a></h2>
             </div>
           </div>
-          <table>
+          <table class="scope">
             <thead>
               <tr>
                 <th>Step name</th>
@@ -389,10 +399,10 @@ end
               <tr>
                 <th class="step_name">there is a dragon</th>
                 <td>
-                  <p><a href="#modal--1607518262949103574">
+                  <p><a href="#modal-1007854028844215278">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/dragon_steps.rb:12
                   </a></p>
-                  <div id="modal--1607518262949103574" class="modal">
+                  <div id="modal-1007854028844215278" class="modal">
                     <big><pre>  step "there is a dragon" do
     self.dragon = 1
   end
@@ -404,10 +414,10 @@ end
               <tr>
                 <th class="step_name">the dragon attacks the knight</th>
                 <td>
-                  <p><a href="#modal--1880487334341299606">
+                  <p><a href="#modal-3493313479300686110">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/dragon_steps.rb:16
                   </a></p>
-                  <div id="modal--1880487334341299606" class="modal">
+                  <div id="modal-3493313479300686110" class="modal">
                     <big><pre>  step "the dragon attacks the knight" do
     knight.attacked_for(dragon_attack)
   end
@@ -419,10 +429,10 @@ end
               <tr>
                 <th class="step_name">there is a knight</th>
                 <td>
-                  <p><a href="#modal--2663311426362486982">
+                  <p><a href="#modal--1560007391951635682">
                       <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:18
                   </a></p>
-                  <div id="modal--2663311426362486982" class="modal">
+                  <div id="modal--1560007391951635682" class="modal">
                     <big><pre>  step "there is a knight" do
     self.knight = Knight.new
   end
@@ -434,10 +444,10 @@ end
               <tr>
                 <th class="step_name">the knight is alive</th>
                 <td>
-                  <p><a href="#modal-4296935948474306874">
+                  <p><a href="#modal-701156028017549662">
                       <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:22
                   </a></p>
-                  <div id="modal-4296935948474306874" class="modal">
+                  <div id="modal-701156028017549662" class="modal">
                     <big><pre>  step "the knight is alive" do
     knight.should be_alive
   end
@@ -449,10 +459,10 @@ end
               <tr>
                 <th class="step_name">the knight is dead</th>
                 <td>
-                  <p><a href="#modal-4597106328064986522">
+                  <p><a href="#modal--1372047139438977026">
                       <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:26
                   </a></p>
-                  <div id="modal-4597106328064986522" class="modal">
+                  <div id="modal--1372047139438977026" class="modal">
                     <big><pre>  step "the knight is dead" do
     knight.should_not be_alive
   end
@@ -464,12 +474,12 @@ end
             </tbody>
           </table>
           
-          <div class="row">
+          <div class="row scope_title">
             <div class="padded">
               <h2><i class="icon-caret-right"></i> <a name="red_dragon">red_dragon</a></h2>
             </div>
           </div>
-          <table>
+          <table class="scope">
             <thead>
               <tr>
                 <th>Step name</th>
@@ -481,10 +491,10 @@ end
               <tr>
                 <th class="step_name">the dragon breathes fire</th>
                 <td>
-                  <p><a href="#modal-4558986778392065372">
+                  <p><a href="#modal-3095036811272229486">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/dragon_steps.rb:35
                   </a></p>
-                  <div id="modal-4558986778392065372" class="modal">
+                  <div id="modal-3095036811272229486" class="modal">
                     <big><pre>  step "the dragon breathes fire" do
     self.red_dragon = 1
   end
@@ -496,10 +506,10 @@ end
               <tr>
                 <th class="step_name">there is a dragon</th>
                 <td>
-                  <p><a href="#modal-1426575558082763356">
+                  <p><a href="#modal--2699197053860197570">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/dragon_steps.rb:12
                   </a></p>
-                  <div id="modal-1426575558082763356" class="modal">
+                  <div id="modal--2699197053860197570" class="modal">
                     <big><pre>  step "there is a dragon" do
     self.dragon = 1
   end
@@ -511,10 +521,10 @@ end
               <tr>
                 <th class="step_name">the dragon attacks the knight</th>
                 <td>
-                  <p><a href="#modal-4607882806511530652">
+                  <p><a href="#modal-1077352237351247982">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/dragon_steps.rb:16
                   </a></p>
-                  <div id="modal-4607882806511530652" class="modal">
+                  <div id="modal-1077352237351247982" class="modal">
                     <big><pre>  step "the dragon attacks the knight" do
     knight.attacked_for(dragon_attack)
   end
@@ -526,10 +536,10 @@ end
               <tr>
                 <th class="step_name">there is a knight</th>
                 <td>
-                  <p><a href="#modal--3262720006545921684">
+                  <p><a href="#modal-4216730154955174510">
                       <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:18
                   </a></p>
-                  <div id="modal--3262720006545921684" class="modal">
+                  <div id="modal-4216730154955174510" class="modal">
                     <big><pre>  step "there is a knight" do
     self.knight = Knight.new
   end
@@ -541,10 +551,10 @@ end
               <tr>
                 <th class="step_name">the knight is alive</th>
                 <td>
-                  <p><a href="#modal-1119385918144588652">
+                  <p><a href="#modal--4276239350558855762">
                       <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:22
                   </a></p>
-                  <div id="modal-1119385918144588652" class="modal">
+                  <div id="modal--4276239350558855762" class="modal">
                     <big><pre>  step "the knight is alive" do
     knight.should be_alive
   end
@@ -556,10 +566,10 @@ end
               <tr>
                 <th class="step_name">the knight is dead</th>
                 <td>
-                  <p><a href="#modal-654435283478867916">
+                  <p><a href="#modal--304642352826487346">
                       <i class="icon-book"></i> /private/tmp/turnip/examples/steps/knight_steps.rb:26
                   </a></p>
-                  <div id="modal-654435283478867916" class="modal">
+                  <div id="modal--304642352826487346" class="modal">
                     <big><pre>  step "the knight is dead" do
     knight.should_not be_alive
   end
@@ -571,12 +581,12 @@ end
             </tbody>
           </table>
           
-          <div class="row">
+          <div class="row scope_title">
             <div class="padded">
               <h2><i class="icon-caret-right"></i> <a name="step_calling">step_calling</a></h2>
             </div>
           </div>
-          <table>
+          <table class="scope">
             <thead>
               <tr>
                 <th>Step name</th>
@@ -588,10 +598,10 @@ end
               <tr>
                 <th class="step_name">visible callee</th>
                 <td>
-                  <p><a href="#modal--1767298982645774641">
+                  <p><a href="#modal--1247508850604914291">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/step_calling_steps.rb:2
                   </a></p>
-                  <div id="modal--1767298982645774641" class="modal">
+                  <div id="modal--1247508850604914291" class="modal">
                     <big><pre>  step 'visible callee' do
     @testing = 123
   end
@@ -603,10 +613,10 @@ end
               <tr>
                 <th class="step_name">a visible step call</th>
                 <td>
-                  <p><a href="#modal-3678681731009107887">
+                  <p><a href="#modal-2089138923229098157">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/step_calling_steps.rb:6
                   </a></p>
-                  <div id="modal-3678681731009107887" class="modal">
+                  <div id="modal-2089138923229098157" class="modal">
                     <big><pre>  step 'a visible step call' do
     step 'visible callee'
     @testing.should eq(123)
@@ -619,10 +629,10 @@ end
               <tr>
                 <th class="step_name">an invisible step call</th>
                 <td>
-                  <p><a href="#modal--701407596766906465">
+                  <p><a href="#modal--438129800771134867">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/step_calling_steps.rb:11
                   </a></p>
-                  <div id="modal--701407596766906465" class="modal">
+                  <div id="modal--438129800771134867" class="modal">
                     <big><pre>  step 'an invisible step call' do
     step 'this is an unimplemented step'
   end
@@ -634,10 +644,10 @@ end
               <tr>
                 <th class="step_name">a global step call</th>
                 <td>
-                  <p><a href="#modal-328502525825278783">
+                  <p><a href="#modal-1731600060562065645">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/step_calling_steps.rb:15
                   </a></p>
-                  <div id="modal-328502525825278783" class="modal">
+                  <div id="modal-1731600060562065645" class="modal">
                     <big><pre>  step 'a global step call' do
     step 'there is a monster'
     @monster.should == 1
@@ -650,10 +660,10 @@ end
               <tr>
                 <th class="step_name">an included call</th>
                 <td>
-                  <p><a href="#modal-1591447172138331551">
+                  <p><a href="#modal-4269469918529959565">
                       <i class="icon-book"></i> /tmp/turnip/examples/steps/step_calling_steps.rb:20
                   </a></p>
-                  <div id="modal-1591447172138331551" class="modal">
+                  <div id="modal-4269469918529959565" class="modal">
                     <big><pre>  step 'an included call' do
     step 'an auto-loaded step is available'
   end
@@ -681,10 +691,38 @@ end
     <!-- scripts -->
     <script type="text/javascript" src="./js/plugins/jquery.orbit-1.4.0.js"></script>
     <script type="text/javascript" src="./js/groundwork.js"></script>
+    <script type="text/javascript" src="./js/jquery.quicksearch.js"></script>
     <script type="text/javascript">
-      $('th.step_name').each(function() {
-          var decoration = $(this).text().replace(/(:[\w]+)/g, function() { return "<code>" + RegExp.$1 + "</code>"; });
-          $(this).html(decoration);
+      $(function () {
+          $('th.step_name').each(function() {
+              var decoration = $(this).text().replace(/(:[\w]+)/g, function() { return "<code>" + RegExp.$1 + "</code>"; });
+              $(this).html(decoration);
+          });
+
+         $('input#keyword').quicksearch('table.scope tbody tr', {
+             'delay'    : 100,
+             'selector' : 'th',
+             'loader'   : 'div#loading i',
+
+             'show' : function () {
+                 $(this).show();
+                 var table = $(this).closest('table.scope');
+                 var title = table.prev('div.scope_title');
+                 table.show();
+                 title.show();
+             },
+
+             'hide' : function () {
+                 $(this).hide();
+                 if ($(this).siblings(':visible').size() == 0) {
+                     var table = $(this).closest('table.scope');
+                     var title = table.prev('div.scope_title');
+                     table.hide();
+                     title.hide();
+                 }
+             }
+         });
+
       });
     </script>
   </body>
