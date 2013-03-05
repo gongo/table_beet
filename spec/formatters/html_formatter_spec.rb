@@ -1,5 +1,5 @@
 require 'spec_helper'
-require 'pathname'
+require 'erb'
 
 describe TableBeet::Formatters::HTMLFormatter do
   before do
@@ -19,12 +19,12 @@ describe TableBeet::Formatters::HTMLFormatter do
 
     describe '.flush' do
       it 'should make html that has no scopes and steps' do
-        expect(file).not_to include('<a href="#turnip">turnip</a>')
-        expect(file).not_to include('<a href="#turnip">test</a>')
-        expect(file).not_to include("Are you talking about :name !!!!!")
-        expect(file).not_to include("the test is insufficient")
-        expect(file).not_to include("To run the test:")
-        expect(file).not_to include("When you give up, that's when the game is over.")
+        expect(file).not_to include('<a href="' + ERB::Util.h('#turnip') + '">' + ERB::Util.h('turnip') + '</a>')
+        expect(file).not_to include('<a href="' + ERB::Util.h('#test')   + '">' + ERB::Util.h('test')   + '</a>')
+        expect(file).not_to include(ERB::Util.h("Are you talking about :name !!!!!"))
+        expect(file).not_to include(ERB::Util.h("the test is insufficient"))
+        expect(file).not_to include(ERB::Util.h("To run the test:"))
+        expect(file).not_to include(ERB::Util.h("When you give up, that's when the game is over."))
       end
     end
   end
@@ -34,12 +34,12 @@ describe TableBeet::Formatters::HTMLFormatter do
 
     describe '.flush' do
       it 'should make html that has scopes and steps' do
-        expect(file).to include('<a href="#turnip">turnip</a>')
-        expect(file).to include('<a href="#test">test</a>')
-        expect(file).to include("<th class=\"step_name\">Are you talking about :name !!!!!</th>")
-        expect(file).to include("<th class=\"step_name\">the test is insufficient</th>")
-        expect(file).to include("<th class=\"step_name\">To run the test:</th>")
-        expect(file).to include("<th class=\"step_name\">When you give up, that's when the game is over.</th>")
+        expect(file).to include('<a href="' + ERB::Util.h('#turnip') + '">' + ERB::Util.h('turnip') + '</a>')
+        expect(file).to include('<a href="' + ERB::Util.h('#test')   + '">' + ERB::Util.h('test')   + '</a>')
+        expect(file).to include('<th class="step_name">' + ERB::Util.h("Are you talking about :name !!!!!") + '</th>')
+        expect(file).to include('<th class="step_name">' + ERB::Util.h("the test is insufficient") + '</th>')
+        expect(file).to include('<th class="step_name">' + ERB::Util.h("To run the test:") + '</th>')
+        expect(file).to include('<th class="step_name">' + ERB::Util.h("When you give up, that's when the game is over.") + '</th>')
       end
     end
   end

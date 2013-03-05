@@ -2,6 +2,9 @@
 
 TableBeet is reference generator for [turnip](https://github.com/jnicklas/turnip) steps of existing.
 
+[![Build Status](https://travis-ci.org/gongo/table_beet.png?branch=master)](https://travis-ci.org/gongo/table_beet)
+[![Code Climate](https://codeclimate.com/github/gongo/table_beet.png)](https://codeclimate.com/github/gongo/table_beet)
+
 ## Installation
 
 ### RubyGems
