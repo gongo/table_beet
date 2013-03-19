@@ -4,6 +4,8 @@ TableBeet is reference generator for [turnip](https://github.com/jnicklas/turnip
 
 [![Build Status](https://travis-ci.org/gongo/table_beet.png?branch=master)](https://travis-ci.org/gongo/table_beet)
 [![Code Climate](https://codeclimate.com/github/gongo/table_beet.png)](https://codeclimate.com/github/gongo/table_beet)
+[![Dependency Status](https://gemnasium.com/gongo/table_beet.png)](https://gemnasium.com/gongo/table_beet)
+[![Coverage Status](https://coveralls.io/repos/gongo/table_beet/badge.png?branch=master)](https://coveralls.io/r/gongo/table_beet)
 
 # Requirements
 
