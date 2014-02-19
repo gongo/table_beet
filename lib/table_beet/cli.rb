@@ -25,6 +25,7 @@ module TableBeet
           on :path=,   'Directory that contains step file. (default: ./spec)'
           on :suffix=, 'Suffix of step file  (default: _steps.rb)'
           on :n, :textmode, 'Display steps in plain text (No generate HTML)'
+          on :s, :oneline, 'Display steps in plain text (short mode)'
           on :v, :version, 'Print this version' do
             puts TableBeet::VERSION
             exit
@@ -33,15 +34,13 @@ module TableBeet
 
         exit if opts.present?(:help)
 
-        h = opts.to_hash
-        h.delete(:help)
-        h.delete(:version)
+        opts.to_hash.tap do |h|
+          h.delete(:help)
+          h.delete(:version)
 
-        if opts.textmode?
-          h[:format] = :text
+          h[:format] = :text if opts.textmode?
+          h[:format] = :oneline if opts.oneline?
         end
-
-        h
       end
   end
 end
