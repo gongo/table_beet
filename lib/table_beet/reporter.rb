@@ -1,5 +1,6 @@
 require 'table_beet/world'
 require 'table_beet/formatters/text_formatter'
+require 'table_beet/formatters/oneline_formatter'
 require 'table_beet/formatters/html_formatter'
 
 module TableBeet
@@ -22,6 +23,8 @@ module TableBeet
       case type
       when :t, :text
         TableBeet::Formatters::TextFormatter
+      when :s, :oneline
+        TableBeet::Formatters::OnelineFormatter
       else
         TableBeet::Formatters::HTMLFormatter
       end
