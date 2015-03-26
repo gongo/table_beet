@@ -1,4 +1,4 @@
-require 'turnip'
+require 'rspec/core/version'
 
 module TableBeet
   class World
@@ -8,7 +8,7 @@ module TableBeet
     def self.scopes
       scopes = Hash.new {|hash, key| hash[key] = []}
 
-      RSpec.configuration.include_or_extend_modules.each do |_, mod, tags|
+      include_modules.each do |mod, tags|
         space = Space.new(mod)
         step_names = space.define_steps
         next if step_names.empty?
@@ -24,6 +24,14 @@ module TableBeet
     end
 
     private
+
+    def self.include_modules
+      if RSpec::Core::Version::STRING >= '3.2.0'
+        RSpec.configuration.instance_variable_get(:@include_modules).items_and_filters
+      else
+        RSpec.configuration.include_or_extend_modules.map { |_, mod, tags| [mod, tags] }
+      end
+    end
 
       class Space
         def initialize(mod)
