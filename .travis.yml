@@ -6,6 +6,7 @@ rvm:
 gemfile:
   - Gemfile
   - rspec-2.99.x.gemfile
+  - rspec-2.14.x.gemfile
 matrix:
   allow_failures:
     - gemfile: Gemfile
