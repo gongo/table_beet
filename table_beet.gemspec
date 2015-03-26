@@ -17,7 +17,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ["lib"]
 
-  gem.add_dependency 'turnip'
+  gem.add_dependency 'turnip', '~> 1.2.4'
   gem.add_dependency 'slop'
   gem.add_dependency 'method_source'
   gem.add_development_dependency 'guard-rspec'
