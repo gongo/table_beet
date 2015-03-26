@@ -1,5 +1,4 @@
 require 'spec_helper'
-require 'pathname'
 
 describe TableBeet::Step do
   let(:step) do

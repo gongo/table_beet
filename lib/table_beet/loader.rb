@@ -12,7 +12,7 @@ module TableBeet
     #
     def load
       # https://github.com/jnicklas/turnip#where-to-place-steps
-      paths.each { |f| require f }
+      paths.each { |f| Kernel.load(f, true) }
       paths.length
     end
 

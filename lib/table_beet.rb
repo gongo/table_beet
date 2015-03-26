@@ -1,5 +1,6 @@
-
 module TableBeet
+  require 'turnip'
+  require 'turnip/rspec'
   require 'table_beet/reporter'
   require 'table_beet/step'
   require 'table_beet/version'
