@@ -5,9 +5,14 @@ rvm:
   - 2.2.*
 gemfile:
   - Gemfile
-  - rspec-2.99.x.gemfile
-  - rspec-2.14.x.gemfile
+  - gemfiles/rspec-2.14.x.gemfile
+  - gemfiles/rspec-2.99.x.gemfile
+  - gemfiles/rspec-3.1.x.gemfile
+  - gemfiles/rspec-3.2.x.gemfile
 matrix:
   allow_failures:
-    - gemfile: Gemfile
+    - gemfile:
+        - Gemfile
+        - gemfiles/rspec-2.99.x.gemfile
+
 script: bundle exec rake spec && bundle exec rspec --tag before_load spec
