@@ -9,7 +9,7 @@ module TableBeet
 
       def flush
         # TODO: uh..
-        Dir.mkdir directory unless File.exists?(directory)
+        Dir.mkdir directory unless File.exist?(directory)
 
         create_index
         create_metadata_dir
