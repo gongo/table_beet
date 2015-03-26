@@ -9,9 +9,7 @@ TableBeet is reference generator for [turnip](https://github.com/jnicklas/turnip
 
 # Requirements
 
-- Ruby
-    - 1.9.3
-    - 2.0.0
+Ruby 1.9.3 or later
 
 ## Installation
 
@@ -115,4 +113,3 @@ http://gongo.github.com/table_beet/demo/index.html
 ### License
 
 see `LICENSE` .
-
