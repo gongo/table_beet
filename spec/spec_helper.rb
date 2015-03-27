@@ -1,9 +1,6 @@
-require 'table_beet'
 require 'coveralls'
 Coveralls.wear!
 
-FIXTURES_PATH = File.dirname(__FILE__) + '/fixtures/steps'
-OUTPUT_PATH = File.dirname(__FILE__) + '/stepdoc'
 
 if RSpec::Core::Version::STRING >= '3.2.0'
   require 'rspec/core/sandbox'
@@ -36,6 +33,11 @@ else
     end
   end
 end
+
+require 'table_beet'
+
+FIXTURES_PATH = File.dirname(__FILE__) + '/fixtures/steps'
+OUTPUT_PATH = File.dirname(__FILE__) + '/stepdoc'
 
 RSpec.configure do |c|
   c.around(:each) do |ex|
