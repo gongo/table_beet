@@ -12,6 +12,12 @@ else
 
   # See: https://github.com/rspec/rspec-core/blob/v3.2.2/lib/rspec/core/sandbox.rb
   module RSpec
+
+    class << self
+      # For RSpec 3.1.x
+      attr_writer :configuration, :world unless RSpec.respond_to?(:configuration=)
+    end
+
     module Core
       module Sandbox
         def self.sandboxed
@@ -23,8 +29,8 @@ else
 
           yield RSpec.configuration
         ensure
-          RSpec.configuration   = orig_config
-          RSpec.world           = orig_world
+          RSpec.configuration = orig_config
+          RSpec.world         = orig_world
         end
       end
     end
