@@ -9,7 +9,7 @@ module TableBeet
 
       def flush
         # TODO: uh..
-        Dir.mkdir directory unless File.exists?(directory)
+        Dir.mkdir directory unless File.exist?(directory)
 
         create_index
         create_metadata_dir
@@ -19,7 +19,6 @@ module TableBeet
 
         def create_index
           erb = ERB.new(File.read(template_output))
-          scopes = @scopes
 
           File.open(output, 'w') do |f|
             f.write erb.result(binding)
@@ -40,10 +39,6 @@ module TableBeet
 
         def template_metadata_dir
           template_dir + '/data'
-        end
-
-        def directory
-          @directory
         end
 
         def output

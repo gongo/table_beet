@@ -1,6 +1,10 @@
+require 'rspec'
+require 'turnip'
+
+# Instead of 'turnip/rspec'
+::RSpec.configuration.include Turnip::Steps, turnip: true
+
 module TableBeet
-  require 'turnip'
-  require 'turnip/rspec'
   require 'table_beet/reporter'
   require 'table_beet/step'
   require 'table_beet/version'
